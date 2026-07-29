@@ -16,7 +16,7 @@ window.addEventListener("scroll", updateHeader, { passive: true });
 menuButton.addEventListener("click", () => {
   const isOpen = menuButton.getAttribute("aria-expanded") === "true";
   menuButton.setAttribute("aria-expanded", String(!isOpen));
-  menuButton.setAttribute("aria-label", isOpen ? "Abrir menu" : "Fechar menu");
+  menuButton.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
   navigation.classList.toggle("open", !isOpen);
   document.body.style.overflow = isOpen ? "" : "hidden";
 });
@@ -24,7 +24,7 @@ menuButton.addEventListener("click", () => {
 navigation.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Abrir menu");
+    menuButton.setAttribute("aria-label", "Open menu");
     navigation.classList.remove("open");
     document.body.style.overflow = "";
   });
@@ -35,8 +35,8 @@ caseButton.addEventListener("click", () => {
   caseButton.setAttribute("aria-expanded", String(!isExpanded));
   caseDetails.hidden = isExpanded;
   caseButton.firstChild.textContent = isExpanded
-    ? "Ver estudo de caso "
-    : "Fechar estudo de caso ";
+    ? "View case study "
+    : "Close case study ";
 
   if (!isExpanded) {
     caseDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -45,11 +45,11 @@ caseButton.addEventListener("click", () => {
 
 copyButton.addEventListener("click", async () => {
   const message =
-    "Olá, Nicole! Conheci seu portfólio e gostaria de conversar sobre uma oportunidade.";
+    "Hi Nicole, I came across your portfolio and would like to connect about an opportunity.";
 
   try {
     await navigator.clipboard.writeText(message);
-    copyFeedback.textContent = "Mensagem copiada. Agora é só colar onde preferir.";
+    copyFeedback.textContent = "Message copied. You can now paste it wherever you prefer.";
   } catch {
     copyFeedback.textContent = message;
   }

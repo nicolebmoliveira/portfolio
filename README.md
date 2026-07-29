@@ -1,20 +1,20 @@
-# Portfólio — Nicole Oliveira
+# Portfolio — Nicole Oliveira
 
-Site estático preparado para publicação gratuita no GitHub Pages.
+Static portfolio website published with GitHub Pages.
 
-## Publicação
+## Publishing
 
-O conteúdo desta pasta deve ser colocado em um repositório público chamado
-`portfolio`. No GitHub, ative **Settings → Pages → Deploy from a branch** e
-selecione a branch `main` e a pasta `/ (root)`.
+The contents of this folder are published from the public `portfolio`
+repository. GitHub Pages is configured to deploy from the `main` branch and
+the `/ (root)` folder.
 
-O endereço resultante será:
+Live website:
 
-`https://SEU-USUARIO.github.io/portfolio/`
+`https://nicolebmoliveira.github.io/portfolio/`
 
-## Antes de divulgar
+## Next updates
 
-- Adicionar os links públicos de LinkedIn e Tableau Public.
-- Confirmar o e-mail profissional que será exibido.
-- Aprovar imagens e dados do estudo de caso da Clínica Shirley.
-- Substituir a visualização ilustrativa pelo dashboard final, se desejado.
+- Add public LinkedIn and Tableau Public links.
+- Confirm the professional email address to display.
+- Approve the images and data used in the Shirley Massage Therapy case study.
+- Replace the illustrative dashboard with the final version, if desired.
