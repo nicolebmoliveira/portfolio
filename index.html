@@ -304,18 +304,130 @@
       </section>
 
       <section id="contact" class="contact-section">
-        <p class="eyebrow light">Let's connect</p>
-        <h2>Have a business question that data can help answer?</h2>
-        <p>
-          I am building new projects and exploring opportunities in data
-          analytics, finance, and business process improvement.
-        </p>
-        <div class="contact-actions">
-          <button class="button button-light" type="button" data-copy-message>
-            Copy a contact message <span aria-hidden="true">↗</span>
-          </button>
-          <span class="copy-feedback" role="status" aria-live="polite"></span>
+        <div class="contact-intro">
+          <p class="eyebrow light">Let's connect</p>
+          <h2>Have a business question that data can help answer?</h2>
+          <p>
+            I am building new projects and exploring opportunities in data
+            analytics, finance, and business process improvement.
+          </p>
         </div>
+
+        <div class="contact-grid">
+          <div class="contact-methods">
+            <p class="contact-label">DIRECT CONTACT</p>
+            <a
+              class="contact-method contact-method-featured"
+              href="https://wa.me/5534992480634?text=Hi%20Nicole%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>
+                <small>WHATSAPP</small>
+                <strong>Start a conversation</strong>
+              </span>
+              <b aria-hidden="true">↗</b>
+            </a>
+            <a class="contact-method" href="tel:+5534992480634">
+              <span>
+                <small>PHONE</small>
+                <strong>+55 (34) 99248-0634</strong>
+              </span>
+              <b aria-hidden="true">↗</b>
+            </a>
+            <a class="contact-method" href="mailto:ni.batistuta@gmail.com">
+              <span>
+                <small>EMAIL</small>
+                <strong>ni.batistuta@gmail.com</strong>
+              </span>
+              <b aria-hidden="true">↗</b>
+            </a>
+            <p class="contact-note">
+              Based in Brazil and available for remote opportunities.
+            </p>
+          </div>
+
+          <form
+            class="contact-form"
+            action="https://formsubmit.co/ni.batistuta@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New portfolio inquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://nicolebmoliveira.github.io/portfolio/thanks.html"
+            />
+            <input
+              class="form-honeypot"
+              type="text"
+              name="_honey"
+              tabindex="-1"
+              autocomplete="off"
+            />
+
+            <div class="form-heading">
+              <span>GET IN TOUCH</span>
+              <p>Send a message directly to my inbox.</p>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="contact-name">Name</label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="contact-email">Email</label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@company.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-subject">Subject</label>
+              <input
+                id="contact-subject"
+                name="subject"
+                type="text"
+                placeholder="What would you like to discuss?"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="5"
+                placeholder="Tell me about the opportunity or business challenge."
+                required
+              ></textarea>
+            </div>
+
+            <button class="button button-light form-submit" type="submit">
+              Send message <span aria-hidden="true">↗</span>
+            </button>
+            <p class="form-privacy">
+              Your information is used only to respond to your inquiry.
+            </p>
+          </form>
+        </div>
+
         <div class="contact-footer">
           <span>Nicole Oliveira © <span data-current-year></span></span>
           <span>A portfolio built through continuous learning</span>
