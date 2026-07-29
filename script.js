@@ -3,6 +3,7 @@ const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".main-nav");
 const caseButton = document.querySelector(".project-link");
 const caseDetails = document.querySelector("#case-details");
+const timelineItems = document.querySelectorAll(".timeline-item");
 
 const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 16);
@@ -39,6 +40,37 @@ caseButton.addEventListener("click", () => {
   if (!isExpanded) {
     caseDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
+});
+
+timelineItems.forEach((item) => {
+  const trigger = item.querySelector(".timeline-trigger");
+  const detail = item.querySelector(".timeline-detail");
+
+  const updateTimelineState = () => {
+    const isOpen =
+      item.classList.contains("is-open") ||
+      item.classList.contains("is-preview");
+    trigger.setAttribute(
+      "aria-expanded",
+      String(item.classList.contains("is-open")),
+    );
+    detail.setAttribute("aria-hidden", String(!isOpen));
+  };
+
+  trigger.addEventListener("click", () => {
+    item.classList.toggle("is-open");
+    updateTimelineState();
+  });
+
+  item.addEventListener("mouseenter", () => {
+    item.classList.add("is-preview");
+    updateTimelineState();
+  });
+
+  item.addEventListener("mouseleave", () => {
+    item.classList.remove("is-preview");
+    updateTimelineState();
+  });
 });
 
 document.querySelector("[data-current-year]").textContent =

@@ -620,6 +620,54 @@ button {
   font-size: 0.73rem;
 }
 
+.business-value {
+  display: grid;
+  margin: clamp(70px, 9vw, 120px) 0 0 9vw;
+  padding-top: clamp(45px, 6vw, 75px);
+  border-top: 1px solid var(--line);
+  grid-template-columns: minmax(230px, 0.55fr) minmax(0, 1.45fr);
+  gap: clamp(40px, 7vw, 100px);
+}
+
+.value-intro h3 {
+  max-width: 410px;
+  margin: 18px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.08;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 42px);
+}
+
+.value-grid article {
+  padding-top: 20px;
+  border-top: 2px solid var(--ink);
+}
+
+.value-grid article > span {
+  color: #799087;
+  font-size: 0.62rem;
+}
+
+.value-grid h4 {
+  margin: 28px 0 12px;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+}
+
+.value-grid p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
 .projects-section {
   color: var(--paper);
   background: var(--dark);
@@ -912,91 +960,251 @@ button {
   line-height: 1.65;
 }
 
-.journey-section {
-  background: var(--paper);
-}
-
-.journey-card {
+.portfolio-roadmap {
   display: grid;
-  margin: 90px 0 0 9vw;
-  padding: clamp(30px, 5vw, 70px);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--white);
-  grid-template-columns: 80px 1.2fr 0.8fr;
-  align-items: start;
-  gap: clamp(25px, 5vw, 70px);
+  margin: clamp(70px, 9vw, 120px) 0 0 9vw;
+  padding-top: clamp(40px, 5vw, 65px);
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: clamp(35px, 7vw, 90px);
 }
 
-.degree-mark {
-  display: grid;
-  width: 64px;
-  height: 64px;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--paper);
-  background: var(--dark);
-  font-family: Georgia, serif;
-  font-size: 1.7rem;
-  font-style: italic;
-}
-
-.journey-label {
-  margin: 0 0 16px;
-  color: #668078;
-  font-size: 0.62rem;
-  letter-spacing: 0.13em;
-}
-
-.journey-content h3 {
-  margin: 0;
+.portfolio-roadmap h3 {
+  max-width: 420px;
+  margin: 16px 0 0;
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.6vw, 2.7rem);
+  font-size: clamp(1.65rem, 2.7vw, 2.8rem);
   font-weight: 500;
   letter-spacing: -0.045em;
 }
 
-.journey-content > p:not(.journey-label) {
-  max-width: 640px;
+.portfolio-roadmap ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-roadmap li {
+  display: grid;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  color: #c8d4d0;
+  grid-template-columns: 48px 1fr;
+  font-size: 0.86rem;
+}
+
+.portfolio-roadmap li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.portfolio-roadmap li span {
+  color: var(--mint);
+  font-size: 0.58rem;
+}
+
+.journey-section {
+  background: var(--paper);
+}
+
+.timeline-intro {
+  display: flex;
+  margin: 70px 0 35px 9vw;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.timeline-intro > p:first-child {
+  max-width: 650px;
+  margin: 0;
   color: var(--ink-soft);
+  font-size: 1rem;
   line-height: 1.7;
 }
 
-.research-points {
-  display: flex;
-  margin: 26px 0;
-  gap: 8px;
-  flex-wrap: wrap;
+.timeline-instruction {
+  margin: 0;
+  color: #718079;
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.research-points span {
-  padding: 8px 11px;
-  border-radius: 999px;
-  background: var(--paper);
-  font-size: 0.65rem;
+.career-timeline {
+  position: relative;
+  margin: 0 0 0 9vw;
+  padding: 0;
+  list-style: none;
 }
 
-.journey-content a {
+.career-timeline::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 146px;
+  width: 1px;
+  content: "";
+  background: var(--line);
+}
+
+.timeline-item {
+  position: relative;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline-trigger {
+  display: grid;
+  width: 100%;
+  padding: 24px 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  grid-template-columns: 124px 45px 1fr 35px;
+  align-items: center;
+  gap: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.timeline-year {
+  color: #577168;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+.timeline-dot {
+  position: relative;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  border: 3px solid var(--paper);
+  border-radius: 50%;
+  background: #789088;
+  box-shadow: 0 0 0 1px #789088;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.timeline-summary {
+  display: grid;
+  grid-template-columns: minmax(155px, 0.65fr) minmax(220px, 1fr) minmax(180px, 0.9fr);
+  align-items: baseline;
+  gap: 22px;
+}
+
+.timeline-summary small {
+  color: #789088;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+}
+
+.timeline-summary strong {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.5vw, 1.24rem);
+  font-weight: 500;
+}
+
+.timeline-summary em {
+  color: #65736e;
+  font-size: 0.78rem;
+  font-style: normal;
+}
+
+.timeline-toggle {
+  color: #789088;
+  font-size: 1.2rem;
+  transition: transform 180ms ease;
+}
+
+.timeline-detail {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 45px 0 169px;
+  opacity: 0;
+  transition: max-height 260ms ease, padding 260ms ease, opacity 180ms ease;
+}
+
+.timeline-detail p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.timeline-detail a {
   display: inline-block;
-  padding-bottom: 5px;
-  border-bottom: 1px solid var(--ink);
-  font-size: 0.82rem;
+  margin-left: 8px;
+  border-bottom: 1px solid currentColor;
+  color: #376854;
   font-weight: 600;
 }
 
-.journey-content a span {
-  margin-left: 14px;
+.timeline-item.is-preview .timeline-detail,
+.timeline-item.is-open .timeline-detail {
+  max-height: 190px;
+  padding-top: 0;
+  padding-bottom: 24px;
+  opacity: 1;
 }
 
-.journey-card blockquote {
-  margin: 0;
-  padding-left: 30px;
-  border-left: 1px solid var(--line);
-  color: #53665f;
-  font-family: Georgia, serif;
-  font-size: clamp(1.25rem, 2vw, 2rem);
-  font-style: italic;
-  line-height: 1.5;
+.timeline-item.is-preview .timeline-dot,
+.timeline-item.is-open .timeline-dot {
+  background: var(--coral);
+  transform: scale(1.2);
+}
+
+.timeline-item.is-open .timeline-toggle {
+  transform: rotate(45deg);
+}
+
+.timeline-trigger:focus-visible {
+  outline: 2px solid #477d68;
+  outline-offset: 4px;
+}
+
+.credentials-band {
+  display: grid;
+  margin: clamp(55px, 7vw, 90px) 0 0 9vw;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--line);
+}
+
+.credentials-band > div {
+  padding: clamp(26px, 4vw, 48px);
+  background: var(--white);
+}
+
+.credential-kicker {
+  display: block;
+  margin-bottom: 18px;
+  color: #668078;
+  font-size: 0.58rem;
+  letter-spacing: 0.13em;
+}
+
+.credentials-band strong {
+  display: block;
+  max-width: 470px;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.65rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.credentials-band p {
+  max-width: 520px;
+  margin: 14px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.65;
 }
 
 .contact-section {
@@ -1283,12 +1491,25 @@ button {
     max-width: 650px;
   }
 
-  .journey-card {
-    grid-template-columns: 64px 1fr;
+  .business-value,
+  .portfolio-roadmap {
+    grid-template-columns: 1fr;
   }
 
-  .journey-card blockquote {
+  .value-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .timeline-summary {
+    grid-template-columns: minmax(160px, 0.8fr) minmax(230px, 1.2fr);
+  }
+
+  .timeline-summary em {
     grid-column: 2;
+  }
+
+  .credentials-band {
+    grid-template-columns: 1fr;
   }
 
   .contact-grid {
@@ -1426,7 +1647,11 @@ button {
   .about-grid,
   .featured-project,
   .case-details,
-  .journey-card {
+  .business-value,
+  .portfolio-roadmap,
+  .timeline-intro,
+  .career-timeline,
+  .credentials-band {
     margin-left: 0;
   }
 
@@ -1471,21 +1696,80 @@ button {
     gap: 35px;
   }
 
-  .journey-card {
-    padding: 28px 22px;
+  .business-value {
+    margin-top: 65px;
     grid-template-columns: 1fr;
   }
 
-  .degree-mark {
-    width: 54px;
-    height: 54px;
+  .value-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
-  .journey-card blockquote {
-    padding: 24px 0 0;
-    border-top: 1px solid var(--line);
-    border-left: 0;
+  .portfolio-roadmap {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-intro {
+    margin-top: 55px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .career-timeline::before {
+    left: 10px;
+  }
+
+  .timeline-trigger {
+    padding: 23px 0;
+    grid-template-columns: 32px 1fr 28px;
+  }
+
+  .timeline-year {
+    grid-column: 2;
+    margin-bottom: 9px;
+    font-size: 0.78rem;
+  }
+
+  .timeline-dot {
+    grid-row: 1 / span 2;
     grid-column: 1;
+  }
+
+  .timeline-summary {
+    grid-row: 2;
+    grid-column: 2;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .timeline-summary em {
+    grid-column: 1;
+  }
+
+  .timeline-toggle {
+    grid-row: 1 / span 2;
+    grid-column: 3;
+  }
+
+  .timeline-detail {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .timeline-item.is-preview .timeline-detail,
+  .timeline-item.is-open .timeline-detail {
+    max-height: 250px;
+    padding-bottom: 22px;
+  }
+
+  .timeline-detail a {
+    margin: 8px 0 0;
+  }
+
+  .credentials-band {
+    grid-template-columns: 1fr;
   }
 
   .contact-section {
