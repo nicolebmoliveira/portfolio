@@ -108,6 +108,40 @@ button {
   font-weight: 500;
 }
 
+.language-switch {
+  display: flex;
+  min-width: 76px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #718079;
+  background: rgba(245, 242, 233, 0.72);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  backdrop-filter: blur(12px);
+}
+
+.language-switch a {
+  transition: color 160ms ease;
+}
+
+.language-switch a:hover,
+.language-switch a:focus-visible,
+.language-switch a.active {
+  color: var(--ink);
+}
+
+.language-switch a.active {
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
 .main-nav a {
   position: relative;
 }
@@ -1526,6 +1560,19 @@ button {
     padding: 16px 20px;
   }
 
+  .language-switch {
+    z-index: 102;
+    min-width: 70px;
+    margin-left: auto;
+    margin-right: 8px;
+    order: 2;
+    background: rgba(245, 242, 233, 0.92);
+  }
+
+  .menu-toggle {
+    order: 3;
+  }
+
   .menu-toggle {
     z-index: 102;
     display: flex;
@@ -1840,6 +1887,13 @@ button {
   background: var(--paper);
   flex-direction: column;
   justify-content: space-between;
+}
+
+.thanks-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .thanks-card h1 {

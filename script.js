@@ -4,6 +4,8 @@ const navigation = document.querySelector(".main-nav");
 const caseButton = document.querySelector(".project-link");
 const caseDetails = document.querySelector("#case-details");
 const timelineItems = document.querySelectorAll(".timeline-item");
+const languageLinks = document.querySelectorAll("[data-language-link]");
+const isPortuguese = document.documentElement.lang.toLowerCase().startsWith("pt");
 
 const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 16);
@@ -15,7 +17,16 @@ window.addEventListener("scroll", updateHeader, { passive: true });
 menuButton.addEventListener("click", () => {
   const isOpen = menuButton.getAttribute("aria-expanded") === "true";
   menuButton.setAttribute("aria-expanded", String(!isOpen));
-  menuButton.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+  menuButton.setAttribute(
+    "aria-label",
+    isOpen
+      ? isPortuguese
+        ? "Abrir menu"
+        : "Open menu"
+      : isPortuguese
+        ? "Fechar menu"
+        : "Close menu",
+  );
   navigation.classList.toggle("open", !isOpen);
   document.body.style.overflow = isOpen ? "" : "hidden";
 });
@@ -23,7 +34,10 @@ menuButton.addEventListener("click", () => {
 navigation.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open menu");
+    menuButton.setAttribute(
+      "aria-label",
+      isPortuguese ? "Abrir menu" : "Open menu",
+    );
     navigation.classList.remove("open");
     document.body.style.overflow = "";
   });
@@ -34,8 +48,12 @@ caseButton.addEventListener("click", () => {
   caseButton.setAttribute("aria-expanded", String(!isExpanded));
   caseDetails.hidden = isExpanded;
   caseButton.firstChild.textContent = isExpanded
-    ? "View case study "
-    : "Close case study ";
+    ? isPortuguese
+      ? "Ver estudo de caso "
+      : "View case study "
+    : isPortuguese
+      ? "Fechar estudo de caso "
+      : "Close case study ";
 
   if (!isExpanded) {
     caseDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -70,6 +88,12 @@ timelineItems.forEach((item) => {
   item.addEventListener("mouseleave", () => {
     item.classList.remove("is-preview");
     updateTimelineState();
+  });
+});
+
+languageLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    link.href = `${link.dataset.page}${window.location.hash}`;
   });
 });
 
