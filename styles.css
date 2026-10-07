@@ -879,7 +879,7 @@ button {
   margin: auto;
   place-items: center;
   border-radius: 50%;
-  background: conic-gradient(var(--mint) 0 42%, var(--coral) 42% 68%, #e1c467 68% 82%, #bdd1ca 82%);
+  background: conic-gradient(var(--mint) 0 54.3%, var(--coral) 54.3% 82.2%, #e1c467 82.2% 93%, #bdd1ca 93%);
 }
 
 .donut::before {
@@ -968,6 +968,10 @@ button {
   border-top: 1px solid rgba(255, 255, 255, 0.13);
   grid-template-columns: repeat(3, 1fr);
   gap: 4vw;
+}
+
+.case-details > div {
+  padding-right: 1rem;
 }
 
 .case-details[hidden] {
