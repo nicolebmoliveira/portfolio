@@ -1916,3 +1916,29 @@ button {
   color: var(--ink-soft);
   line-height: 1.7;
 }
+.project-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.1rem;
+  border-radius: 999px;
+  background: var(--coral);
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.dashboard-link:hover,
+.dashboard-link:focus-visible {
+  background: #d96850;
+  transform: translateY(-2px);
+}

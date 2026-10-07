@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive financial performance dashboard for a massage therapy practice." />
+    <title>Financial Performance Dashboard | Nicole Oliveira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <a class="brand" id="portfolio-link" href="index.html#projects" aria-label="Back to Nicole Oliveira portfolio">
+        <span>NO</span><strong>Nicole Oliveira</strong>
+      </a>
+      <div class="header-actions">
+        <span class="data-status"><i></i><span data-i18n="status">Data through Sep 2026</span></span>
+        <nav aria-label="Language selector">
+          <a href="dashboard.html?lang=en" data-language="en">EN</a>
+          <span>/</span>
+          <a href="dashboard.html?lang=pt" data-language="pt">PT</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="dashboard-intro">
+        <div>
+          <p class="eyebrow" data-i18n="eyebrow">FINANCIAL PERFORMANCE • CASE STUDY</p>
+          <h1 data-i18n="title">Massage therapy business dashboard</h1>
+          <p data-i18n="subtitle">Revenue, profitability, working capital, service mix, and capacity in one decision-ready view.</p>
+        </div>
+        <aside>
+          <span data-i18n="modelLabel">MODEL</span>
+          <strong data-i18n="modelValue">Actuals + modeled costs</strong>
+          <small data-i18n="modelNote">AR/AP due dates are synthetic and clearly separated from actual financial records.</small>
+        </aside>
+      </section>
+
+      <section class="filter-panel" aria-label="Dashboard filters">
+        <label><span data-i18n="year">Year</span><select id="year-filter"></select></label>
+        <label><span data-i18n="month">Month</span><select id="month-filter"></select></label>
+        <label><span data-i18n="service">Service</span><select id="service-filter"></select></label>
+        <button id="reset-filters" type="button" data-i18n="reset">Reset filters</button>
+        <p id="filter-summary" aria-live="polite"></p>
+      </section>
+
+      <nav class="dashboard-tabs" aria-label="Dashboard views">
+        <button class="active" data-view="executive" data-i18n="tabExecutive">Executive</button>
+        <button data-view="profitability" data-i18n="tabProfitability">Profitability</button>
+        <button data-view="customers" data-i18n="tabCustomers">Customers</button>
+        <button data-view="cashflow" data-i18n="tabCashflow">Expenses &amp; cash</button>
+        <button data-view="aging" data-i18n="tabAging">AR / AP aging</button>
+        <button data-view="capacity" data-i18n="tabCapacity">Capacity</button>
+      </nav>
+
+      <section id="view-executive" class="dashboard-view active">
+        <div id="executive-kpis" class="kpi-grid"></div>
+        <div class="dashboard-grid wide-left">
+          <article class="panel"><div class="panel-heading"><div><p data-i18n="trendLabel">PERFORMANCE TREND</p><h2 data-i18n="trendTitle">Monthly revenue</h2></div><span id="trend-total"></span></div><div id="revenue-trend" class="chart"></div></article>
+          <article class="panel"><div class="panel-heading"><div><p data-i18n="mixLabel">SERVICE MIX</p><h2 data-i18n="mixTitle">Revenue concentration</h2></div></div><div id="service-mix" class="chart"></div></article>
+        </div>
+        <div class="dashboard-grid equal">
+          <article class="panel"><div class="panel-heading"><div><p data-i18n="comparisonLabel">MONTHLY COMPARISON</p><h2 data-i18n="comparisonTitle">Revenue and cash outflows</h2></div></div><div id="revenue-expense-chart" class="chart"></div></article>
+          <article class="panel insight-panel"><p data-i18n="insightsLabel">MANAGEMENT INSIGHTS</p><h2 data-i18n="insightsTitle">What the selected period suggests</h2><ul id="dynamic-insights"></ul></article>
+        </div>
+      </section>
+
+      <section id="view-profitability" class="dashboard-view">
+        <div id="profitability-kpis" class="kpi-grid compact"></div>
+        <article class="panel"><div class="panel-heading"><div><p data-i18n="economicsLabel">SERVICE ECONOMICS</p><h2 data-i18n="economicsTitle">Revenue, contribution, margin, and profit per hour</h2></div></div><div class="table-wrap"><table><thead><tr><th data-i18n="service">Service</th><th data-i18n="revenue">Revenue</th><th data-i18n="sales">Sales</th><th data-i18n="hours">Hours</th><th data-i18n="contribution">Contribution</th><th data-i18n="margin">Margin</th><th data-i18n="profitHour">Profit / hour</th></tr></thead><tbody id="service-table"></tbody></table></div></article>
+        <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p data-i18n="marginLabel">MARGIN PROFILE</p><h2 data-i18n="marginTitle">Contribution margin by service</h2></div></div><div id="margin-chart" class="chart"></div></article><article class="panel"><div class="panel-heading"><div><p data-i18n="pricingLabel">PRICING SIGNAL</p><h2 data-i18n="pricingTitle">Average realized price vs list price</h2></div></div><div id="pricing-chart" class="chart"></div></article></div>
+      </section>
+
+      <section id="view-customers" class="dashboard-view">
+        <div id="customer-kpis" class="kpi-grid compact"></div>
+        <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p data-i18n="retentionLabel">RETENTION</p><h2 data-i18n="retentionTitle">Repeat customer rate by year</h2></div></div><div id="retention-chart" class="chart"></div></article><article class="panel insight-panel"><p data-i18n="customerActionLabel">CUSTOMER ACTIONS</p><h2 data-i18n="customerActionTitle">How to turn retention into growth</h2><ul id="customer-actions"></ul></article></div>
+      </section>
+
+      <section id="view-cashflow" class="dashboard-view">
+        <div id="cash-kpis" class="kpi-grid compact"></div>
+        <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p data-i18n="expenseLabel">EXPENSE STRUCTURE</p><h2 data-i18n="expenseTitle">Spending by accounting group</h2></div></div><div id="expense-groups" class="chart"></div></article><article class="panel"><div class="panel-heading"><div><p data-i18n="cashLabel">CASH FLOW CLASSIFICATION</p><h2 data-i18n="cashTitle">Operating, investing, and financing</h2></div></div><div id="cash-flow-chart" class="chart"></div></article></div>
+        <article class="panel"><div class="panel-heading"><div><p data-i18n="behaviorLabel">COST BEHAVIOR</p><h2 data-i18n="behaviorTitle">Fixed, variable, semivariable, and event-driven spending</h2></div></div><div id="behavior-chart" class="chart"></div></article>
+      </section>
+
+      <section id="view-aging" class="dashboard-view">
+        <div id="aging-kpis" class="kpi-grid compact"></div>
+        <div class="synthetic-banner"><strong data-i18n="syntheticTitle">Demonstration data</strong><span data-i18n="syntheticText">Payment and due dates used in AR/AP aging are synthetic. Actual revenue and expense amounts remain unchanged.</span></div>
+        <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p>AR AGING</p><h2 data-i18n="arTitle">Accounts receivable by aging bucket</h2></div></div><div id="ar-aging-chart" class="chart"></div></article><article class="panel"><div class="panel-heading"><div><p>AP AGING</p><h2 data-i18n="apTitle">Accounts payable by aging bucket</h2></div></div><div id="ap-aging-chart" class="chart"></div></article></div>
+      </section>
+
+      <section id="view-capacity" class="dashboard-view">
+        <div id="capacity-kpis" class="kpi-grid compact"></div>
+        <article class="panel"><div class="panel-heading"><div><p data-i18n="capacityLabel">CAPACITY PLANNING</p><h2 data-i18n="capacityTitle">Theoretical and billable utilization by month</h2></div><span data-i18n="capacityNote">Billable capacity = 70% of 176 hours</span></div><div id="capacity-chart" class="chart"></div></article>
+        <div class="dashboard-grid equal"><article class="panel insight-panel"><p data-i18n="peakLabel">PEAK MANAGEMENT</p><h2 data-i18n="peakTitle">Use pricing and mix when capacity is tight</h2><ul id="capacity-actions"></ul></article><article class="panel"><div class="panel-heading"><div><p data-i18n="serviceHoursLabel">SERVICE HOURS</p><h2 data-i18n="serviceHoursTitle">Hours consumed by service</h2></div></div><div id="service-hours-chart" class="chart"></div></article></div>
+      </section>
+    </main>
+
+    <footer><p data-i18n="footer">Portfolio case study by Nicole Oliveira. Built from anonymized and aggregated operational data.</p><a id="footer-portfolio-link" href="index.html#projects" data-i18n="back">Back to portfolio</a></footer>
+    <script src="dashboard.js" defer></script>
+  </body>
+</html>
