@@ -59,6 +59,30 @@ const fmtMoney = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", { styl
 const fmtNumber = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", { maximumFractionDigits: 1 });
 const fmtPercent = (n) => `${fmtNumber.format((Number(n) || 0) * 100)}%`;
 const colors = ["#4ca783", "#e87b61", "#d7b84b", "#6f9fc5", "#8d77b5", "#7e9b8f", "#c6905a", "#4d7d75", "#bd6f84"];
+const businessLabels = {
+  "Ativo imobilizado": "Property, plant & equipment",
+  "Custos dos produtos": "Product costs",
+  "Custos dos serviços": "Service delivery costs",
+  "Despesas administrativas": "General & administrative expenses",
+  "Despesas operacionais": "Operating expenses",
+  "Obrigações tributárias": "Tax liabilities",
+  "Tributos": "Taxes",
+  "Eventual": "One-time",
+  "Fixo": "Fixed",
+  "Parcelado": "Installment-based",
+  "Semivariável": "Semi-variable",
+  "Variável": "Variable",
+  "Financiamento": "Financing",
+  "Investimento": "Investing",
+  "Operacional": "Operating",
+  "Liquidado": "Paid",
+  "A vencer": "Current",
+  "1-30": "1–30 days past due",
+  "31-60": "31–60 days past due",
+  "61-90": "61–90 days past due",
+  "90+": "90+ days past due",
+};
+const businessLabel = (label) => lang === "en" ? (businessLabels[label] || label) : label;
 
 let data;
 const state = { year: "2026", month: "all", service: "all", view: "executive" };
@@ -114,7 +138,7 @@ function barList(map, formatter = (value) => fmtMoney.format(value)) {
   const entries = Object.entries(map).sort((a, b) => b[1] - a[1]);
   if (!entries.length) return `<p>${t.noData}</p>`;
   const max = Math.max(...entries.map(([, value]) => value), 1);
-  return `<div class="bar-list">${entries.map(([label, value]) => `<div class="bar-row"><label title="${label}">${label}</label><div class="bar-track"><i style="width:${Math.max(2, value / max * 100)}%"></i></div><b>${formatter(value)}</b></div>`).join("")}</div>`;
+  return `<div class="bar-list">${entries.map(([label, value]) => `<div class="bar-row"><label title="${businessLabel(label)}">${businessLabel(label)}</label><div class="bar-track"><i style="width:${Math.max(2, value / max * 100)}%"></i></div><b>${formatter(value)}</b></div>`).join("")}</div>`;
 }
 
 function lineChart(rows) {
