@@ -5,20 +5,20 @@ const translations = {
     modelNote: "AR/AP due dates are synthetic and clearly separated from actual financial records.", year: "Year", month: "Month", service: "Service", reset: "Reset filters",
     tabExecutive: "Executive", tabProfitability: "Profitability", tabCustomers: "Customers", tabCashflow: "Expenses & cash", tabAging: "AR / AP aging", tabCapacity: "Capacity",
     trendLabel: "PERFORMANCE TREND", trendTitle: "Monthly revenue", mixLabel: "SERVICE MIX", mixTitle: "Revenue concentration", comparisonLabel: "MONTHLY COMPARISON",
-    comparisonTitle: "Revenue and cash outflows", insightsLabel: "MANAGEMENT INSIGHTS", insightsTitle: "What the selected period suggests", economicsLabel: "SERVICE ECONOMICS",
+    comparisonTitle: "Revenue, cash outflows, and net result", insightsLabel: "MANAGEMENT INSIGHTS", insightsTitle: "What the selected period suggests", economicsLabel: "SERVICE ECONOMICS",
     economicsTitle: "Revenue, contribution, margin, and profit per hour", revenue: "Revenue", sales: "Sales", hours: "Hours", contribution: "Contribution", margin: "Margin", profitHour: "Profit / hour",
     marginLabel: "MARGIN PROFILE", marginTitle: "Contribution margin by service", pricingLabel: "PRICING SIGNAL", pricingTitle: "Average realized price vs list price",
     retentionLabel: "RETENTION", retentionTitle: "Repeat customer rate by year", customerActionLabel: "CUSTOMER ACTIONS", customerActionTitle: "How to turn retention into growth",
     expenseLabel: "EXPENSE STRUCTURE", expenseTitle: "Spending by accounting group", cashLabel: "CASH FLOW CLASSIFICATION", cashTitle: "Operating, investing, and financing",
     behaviorLabel: "COST BEHAVIOR", behaviorTitle: "Fixed, variable, semivariable, and event-driven spending", syntheticTitle: "Demonstration data",
-    syntheticText: "Payment and due dates used in AR/AP aging are synthetic. Actual revenue and expense amounts remain unchanged.", arTitle: "Accounts receivable by aging bucket",
+    syntheticText: "AR/AP payment timing and aging buckets are synthetic. Past-due percentages refer only to the current open balance, not to all transactions. Actual revenue and expense amounts remain unchanged.", arTitle: "Accounts receivable by aging bucket",
     apTitle: "Accounts payable by aging bucket", capacityLabel: "CAPACITY PLANNING", capacityTitle: "Theoretical and billable utilization by month", capacityNote: "Billable capacity = 70% of 176 hours",
     peakLabel: "PEAK MANAGEMENT", peakTitle: "Use pricing and mix when capacity is tight", serviceHoursLabel: "SERVICE HOURS", serviceHoursTitle: "Hours consumed by service",
     footer: "Portfolio case study by Nicole Oliveira. Built from anonymized and aggregated operational data.", back: "Back to portfolio", allYears: "All years", allMonths: "All months", allServices: "All services",
     revenueKpi: "Revenue", growthKpi: "Revenue growth vs prior year", contributionKpi: "Modeled contribution", contributionMarginKpi: "Contribution margin", sessionsKpi: "Sessions sold",
     ticketKpi: "Average ticket", occupancyKpi: "Theoretical occupancy", practicalKpi: "Billable-capacity utilization", arOpenKpi: "Open AR (synthetic)", apOpenKpi: "Open AP (synthetic)",
     expensesKpi: "Cash outflows", operatingKpi: "Operating cash outflows", investingKpi: "Investing cash outflows", financingKpi: "Financing cash outflows", customersKpi: "Customers",
-    repeatKpi: "Repeat customer rate", top10Kpi: "Top 10 revenue share", salesCustomerKpi: "Sales per customer", selected: "Selected", periodOne: "month", periods: "months", noData: "No data for the selected filters.",
+    repeatKpi: "Repeat customer rate", top10Kpi: "Top 10 revenue share", salesCustomerKpi: "Sales per customer", selected: "Selected", periodOne: "month", periods: "months", noData: "No data for the selected filters.", arOnTimeKpi: "AR paid on time (synthetic)", apOnTimeKpi: "AP paid on time (synthetic)", overdueOpen: "of open balance is past due", netResult: "Net result",
     actual: "Actual", list: "List", customersNote: "Customer metrics are shown by full year to protect privacy and avoid double counting across months.",
   },
   pt: {
@@ -27,20 +27,20 @@ const translations = {
     modelNote: "Os vencimentos de AR/AP são sintéticos e estão separados dos registros financeiros reais.", year: "Ano", month: "Mês", service: "Serviço", reset: "Limpar filtros",
     tabExecutive: "Executivo", tabProfitability: "Rentabilidade", tabCustomers: "Clientes", tabCashflow: "Gastos e caixa", tabAging: "Aging de AR / AP", tabCapacity: "Capacidade",
     trendLabel: "TENDÊNCIA DE DESEMPENHO", trendTitle: "Receita mensal", mixLabel: "MIX DE SERVIÇOS", mixTitle: "Concentração da receita", comparisonLabel: "COMPARAÇÃO MENSAL",
-    comparisonTitle: "Receita e saídas de caixa", insightsLabel: "INSIGHTS GERENCIAIS", insightsTitle: "O que o período selecionado indica", economicsLabel: "ECONOMIA DOS SERVIÇOS",
+    comparisonTitle: "Receita, saídas de caixa e resultado líquido", insightsLabel: "INSIGHTS GERENCIAIS", insightsTitle: "O que o período selecionado indica", economicsLabel: "ECONOMIA DOS SERVIÇOS",
     economicsTitle: "Receita, contribuição, margem e lucro por hora", revenue: "Receita", sales: "Vendas", hours: "Horas", contribution: "Contribuição", margin: "Margem", profitHour: "Lucro / hora",
     marginLabel: "PERFIL DE MARGEM", marginTitle: "Margem de contribuição por serviço", pricingLabel: "SINAL DE PREÇO", pricingTitle: "Preço médio realizado versus preço de tabela",
     retentionLabel: "RETENÇÃO", retentionTitle: "Taxa de recompra por ano", customerActionLabel: "AÇÕES DE CLIENTES", customerActionTitle: "Como transformar retenção em crescimento",
     expenseLabel: "ESTRUTURA DE GASTOS", expenseTitle: "Gastos por grupo contábil", cashLabel: "CLASSIFICAÇÃO DO FLUXO DE CAIXA", cashTitle: "Operacional, investimento e financiamento",
     behaviorLabel: "COMPORTAMENTO DOS CUSTOS", behaviorTitle: "Gastos fixos, variáveis, semivariáveis e eventuais", syntheticTitle: "Dados demonstrativos",
-    syntheticText: "As datas de pagamento e vencimento utilizadas no aging de AR/AP são sintéticas. Os valores reais de receita e gastos não foram alterados.", arTitle: "Contas a receber por faixa de atraso",
+    syntheticText: "Os prazos de pagamento e as faixas de aging de AR/AP são sintéticos. Os percentuais vencidos consideram apenas o saldo atualmente em aberto, não todas as transações. Os valores reais de receita e gastos não foram alterados.", arTitle: "Contas a receber por faixa de atraso",
     apTitle: "Contas a pagar por faixa de atraso", capacityLabel: "PLANEJAMENTO DA CAPACIDADE", capacityTitle: "Utilização teórica e faturável por mês", capacityNote: "Capacidade faturável = 70% de 176 horas",
     peakLabel: "GESTÃO DOS PICOS", peakTitle: "Usar preço e mix quando a capacidade estiver pressionada", serviceHoursLabel: "HORAS POR SERVIÇO", serviceHoursTitle: "Horas consumidas por serviço",
     footer: "Estudo de caso do portfólio de Nicole Oliveira. Construído com dados operacionais anonimizados e agregados.", back: "Voltar ao portfólio", allYears: "Todos os anos", allMonths: "Todos os meses", allServices: "Todos os serviços",
     revenueKpi: "Receita", growthKpi: "Crescimento versus ano anterior", contributionKpi: "Contribuição modelada", contributionMarginKpi: "Margem de contribuição", sessionsKpi: "Sessões vendidas",
     ticketKpi: "Ticket médio", occupancyKpi: "Ocupação teórica", practicalKpi: "Utilização da capacidade faturável", arOpenKpi: "AR em aberto (sintético)", apOpenKpi: "AP em aberto (sintético)",
     expensesKpi: "Saídas de caixa", operatingKpi: "Saídas operacionais", investingKpi: "Saídas de investimento", financingKpi: "Saídas de financiamento", customersKpi: "Clientes",
-    repeatKpi: "Taxa de recompra", top10Kpi: "Participação dos 10 maiores", salesCustomerKpi: "Vendas por cliente", selected: "Selecionado", periodOne: "mês", periods: "meses", noData: "Não há dados para os filtros selecionados.",
+    repeatKpi: "Taxa de recompra", top10Kpi: "Participação dos 10 maiores", salesCustomerKpi: "Vendas por cliente", selected: "Selecionado", periodOne: "mês", periods: "meses", noData: "Não há dados para os filtros selecionados.", arOnTimeKpi: "AR pago em dia (sintético)", apOnTimeKpi: "AP pago em dia (sintético)", overdueOpen: "do saldo em aberto está vencido", netResult: "Resultado líquido",
     actual: "Realizado", list: "Tabela", customersNote: "Os indicadores de clientes são apresentados por ano completo para preservar a privacidade e evitar dupla contagem entre meses.",
   },
 };
@@ -85,9 +85,11 @@ const businessLabels = {
 const businessLabel = (label) => lang === "en" ? (businessLabels[label] || label) : label;
 
 let data;
-const state = { year: "2026", month: "all", service: "all", view: "executive" };
+const state = { year: "2026", months: [], service: "all", view: "executive" };
 const yearFilter = document.querySelector("#year-filter");
 const monthFilter = document.querySelector("#month-filter");
+const monthOptions = document.querySelector("#month-options");
+const monthSummary = document.querySelector("#month-summary");
 const serviceFilter = document.querySelector("#service-filter");
 
 const sum = (values) => values.reduce((a, b) => a + (Number(b) || 0), 0);
@@ -95,7 +97,7 @@ const addMaps = (target, source) => Object.entries(source || {}).forEach(([key, 
 const monthName = (month) => new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en-US", { month: "short", year: "2-digit", timeZone: "UTC" }).format(new Date(`${month}-01T00:00:00Z`));
 
 function selectedMonths(year = state.year) {
-  return data.monthly.filter((row) => (year === "all" || row.month.startsWith(year)) && (state.month === "all" || row.month.endsWith(`-${state.month}`)));
+  return data.monthly.filter((row) => (year === "all" || row.month.startsWith(year)) && (!state.months.length || state.months.includes(row.month.slice(5, 7))));
 }
 
 function aggregateRows(rows = selectedMonths()) {
@@ -125,7 +127,7 @@ function aggregateRows(rows = selectedMonths()) {
 function priorYearGrowth(current) {
   if (state.year === "all") return null;
   const previous = String(Number(state.year) - 1);
-  const previousRows = data.monthly.filter((row) => row.month.startsWith(previous) && (state.month === "all" || row.month.endsWith(`-${state.month}`)));
+  const previousRows = data.monthly.filter((row) => row.month.startsWith(previous) && (!state.months.length || state.months.includes(row.month.slice(5, 7))));
   const previousRevenue = previousRows.flatMap((row) => row.services).filter((s) => state.service === "all" || s.service === state.service).reduce((a, s) => a + Number(s.revenue), 0);
   return previousRevenue ? current.revenue / previousRevenue - 1 : null;
 }
@@ -162,9 +164,13 @@ function donut(serviceMap) {
 
 function comparisonChart(rows) {
   if (!rows.length) return `<p>${t.noData}</p>`;
-  const pairs = rows.map((row) => ({ month: row.month, revenue: row.services.filter((s)=>state.service==="all"||s.service===state.service).reduce((a,s)=>a+Number(s.revenue),0), expenses: Number(row.expenses || 0) }));
-  const max = Math.max(...pairs.flatMap((p)=>[p.revenue,p.expenses]),1);
-  return `<div class="comparison-bars">${pairs.map((p)=>`<div class="comparison-group"><i style="height:${p.revenue/max*220}px" title="${t.revenue}: ${fmtMoney.format(p.revenue)}"></i><i style="height:${p.expenses/max*220}px" title="${t.expensesKpi}: ${fmtMoney.format(p.expenses)}"></i><span>${monthName(p.month).split(" ")[0]}</span></div>`).join("")}</div>`;
+  const pairs = rows.map((row) => { const revenue=row.services.filter((s)=>state.service==="all"||s.service===state.service).reduce((a,s)=>a+Number(s.revenue),0); const expenses=Number(row.expenses||0); return {month:row.month,revenue,expenses,result:revenue-expenses}; });
+  const width=760,height=290,padX=42,padY=32;
+  const values=pairs.flatMap((p)=>[p.revenue,p.expenses,p.result,0]); const min=Math.min(...values); const max=Math.max(...values,1); const range=max-min||1;
+  const x=(i)=>padX+i*((width-padX*2)/Math.max(pairs.length-1,1)); const y=(v)=>height-padY-(v-min)/range*(height-padY*2); const zero=y(0);
+  const points=(key)=>pairs.map((p,i)=>`${x(i)},${y(p[key])}`).join(" ");
+  const area=`${x(0)},${zero} ${points("result")} ${x(pairs.length-1)},${zero}`;
+  return `<div class="combo-legend"><span class="revenue">${t.revenue}</span><span class="expenses">${t.expensesKpi}</span><span class="result">${t.netResult}</span></div><svg class="combo-svg" viewBox="0 0 ${width} ${height}" role="img"><line class="zero" x1="${padX}" x2="${width-padX}" y1="${zero}" y2="${zero}"/><polygon class="result-area" points="${area}"/><polyline class="revenue-line" points="${points("revenue")}"/><polyline class="expense-line" points="${points("expenses")}"/>${pairs.map((p,i)=>`<circle class="revenue-point" cx="${x(i)}" cy="${y(p.revenue)}" r="4"><title>${monthName(p.month)} · ${t.revenue}: ${fmtMoney.format(p.revenue)}</title></circle><circle class="expense-point" cx="${x(i)}" cy="${y(p.expenses)}" r="4"><title>${monthName(p.month)} · ${t.expensesKpi}: ${fmtMoney.format(p.expenses)} · ${t.netResult}: ${fmtMoney.format(p.result)}</title></circle><text x="${x(i)}" y="${height-7}" text-anchor="middle">${monthName(p.month).split(" ")[0]}</text>`).join("")}</svg>`;
 }
 
 function capacityChart(rows) {
@@ -213,8 +219,7 @@ function render() {
 
   const overdueAR = Object.entries(agg.arAging).filter(([k])=>!["Liquidado","A vencer"].includes(k)).reduce((a,[,v])=>a+v,0);
   const overdueAP = Object.entries(agg.apAging).filter(([k])=>k!=="A vencer").reduce((a,[,v])=>a+v,0);
-  const overdueLabel = lang === "pt" ? "vencido" : "overdue";
-  document.querySelector("#aging-kpis").innerHTML = [kpi(t.arOpenKpi,fmtMoney.format(agg.arOpen),`${fmtMoney.format(overdueAR)} ${overdueLabel}`),kpi(t.apOpenKpi,fmtMoney.format(agg.apOpen),`${fmtMoney.format(overdueAP)} ${overdueLabel}`),kpi(lang==="pt"?"AR vencido %":"AR overdue %",fmtPercent(agg.arOpen?overdueAR/agg.arOpen:0),""),kpi(lang==="pt"?"AP vencido %":"AP overdue %",fmtPercent(agg.apOpen?overdueAP/agg.apOpen:0),"")].join("");
+  document.querySelector("#aging-kpis").innerHTML = [kpi(t.arOpenKpi,fmtMoney.format(agg.arOpen),`${fmtPercent(agg.arOpen?overdueAR/agg.arOpen:0)} ${t.overdueOpen}`),kpi(t.arOnTimeKpi,fmtPercent(data.meta.ar_on_time_rate),""),kpi(t.apOpenKpi,fmtMoney.format(agg.apOpen),`${fmtPercent(agg.apOpen?overdueAP/agg.apOpen:0)} ${t.overdueOpen}`),kpi(t.apOnTimeKpi,fmtPercent(data.meta.ap_on_time_rate),"")].join("");
   document.querySelector("#ar-aging-chart").innerHTML = barList(agg.arAging);
   document.querySelector("#ap-aging-chart").innerHTML = barList(agg.apAging);
 
@@ -230,18 +235,20 @@ function populateFilters() {
   yearFilter.innerHTML = `<option value="all">${t.allYears}</option>${years.map((year)=>`<option value="${year}">${year}</option>`).join("")}`;
   yearFilter.value = state.year;
   const months = Array.from({length:12},(_,i)=>String(i+1).padStart(2,"0"));
-  monthFilter.innerHTML = `<option value="all">${t.allMonths}</option>${months.map((m)=>`<option value="${m}">${new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en-US",{month:"long",timeZone:"UTC"}).format(new Date(`2026-${m}-01T00:00:00Z`))}</option>`).join("")}`;
+  monthOptions.innerHTML = months.map((m)=>`<label><input type="checkbox" value="${m}"><span>${new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en-US",{month:"long",timeZone:"UTC"}).format(new Date(`2026-${m}-01T00:00:00Z`))}</span></label>`).join("");
+  updateMonthSummary();
   const services = Object.keys(data.service_model).sort();
   serviceFilter.innerHTML = `<option value="all">${t.allServices}</option>${services.map((service)=>`<option value="${service}">${service}</option>`).join("")}`;
 }
 
 document.querySelectorAll(".dashboard-tabs button").forEach((button)=>button.addEventListener("click",()=>{state.view=button.dataset.view;document.querySelectorAll(".dashboard-tabs button").forEach((b)=>b.classList.toggle("active",b===button));document.querySelectorAll(".dashboard-view").forEach((view)=>view.classList.toggle("active",view.id===`view-${state.view}`));}));
 yearFilter.addEventListener("change",()=>{state.year=yearFilter.value;render();});
-monthFilter.addEventListener("change",()=>{state.month=monthFilter.value;render();});
+function updateMonthSummary(){const names=state.months.map((m)=>new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en-US",{month:"short",timeZone:"UTC"}).format(new Date(`2026-${m}-01T00:00:00Z`)));monthSummary.textContent=names.length?names.join(", "):t.allMonths;}
+monthOptions.addEventListener("change",()=>{state.months=[...monthOptions.querySelectorAll("input:checked")].map((input)=>input.value);updateMonthSummary();render();});
 serviceFilter.addEventListener("change",()=>{state.service=serviceFilter.value;render();});
-document.querySelector("#reset-filters").addEventListener("click",()=>{state.year="2026";state.month="all";state.service="all";yearFilter.value=state.year;monthFilter.value=state.month;serviceFilter.value=state.service;render();});
+document.querySelector("#reset-filters").addEventListener("click",()=>{state.year="2026";state.months=[];state.service="all";yearFilter.value=state.year;serviceFilter.value=state.service;monthOptions.querySelectorAll("input").forEach((input)=>{input.checked=false;});updateMonthSummary();render();});
 
-fetch("dashboard-data.json")
+fetch("dashboard-data.json?v=20261008-1")
   .then((response)=>{if(!response.ok) throw new Error("Data unavailable"); return response.json();})
   .then((payload)=>{data=payload;populateFilters();render();})
   .catch(()=>{document.querySelector("main").innerHTML=`<p>${t.noData}</p>`;});

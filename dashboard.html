@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="dashboard.css?v=20261008-1" />
   </head>
   <body>
     <header class="dashboard-header">
@@ -41,7 +41,7 @@
 
       <section class="filter-panel" aria-label="Dashboard filters">
         <label><span data-i18n="year">Year</span><select id="year-filter"></select></label>
-        <label><span data-i18n="month">Month</span><select id="month-filter"></select></label>
+        <div class="month-control"><span data-i18n="month">Month</span><details id="month-filter" class="multi-select"><summary id="month-summary">All months</summary><div id="month-options" class="month-options"></div></details></div>
         <label><span data-i18n="service">Service</span><select id="service-filter"></select></label>
         <button id="reset-filters" type="button" data-i18n="reset">Reset filters</button>
         <p id="filter-summary" aria-live="polite"></p>
@@ -63,7 +63,7 @@
           <article class="panel"><div class="panel-heading"><div><p data-i18n="mixLabel">SERVICE MIX</p><h2 data-i18n="mixTitle">Revenue concentration</h2></div></div><div id="service-mix" class="chart"></div></article>
         </div>
         <div class="dashboard-grid equal">
-          <article class="panel"><div class="panel-heading"><div><p data-i18n="comparisonLabel">MONTHLY COMPARISON</p><h2 data-i18n="comparisonTitle">Revenue and cash outflows</h2></div></div><div id="revenue-expense-chart" class="chart"></div></article>
+          <article class="panel"><div class="panel-heading"><div><p data-i18n="comparisonLabel">MONTHLY COMPARISON</p><h2 data-i18n="comparisonTitle">Revenue, cash outflows, and net result</h2></div></div><div id="revenue-expense-chart" class="chart"></div></article>
           <article class="panel insight-panel"><p data-i18n="insightsLabel">MANAGEMENT INSIGHTS</p><h2 data-i18n="insightsTitle">What the selected period suggests</h2><ul id="dynamic-insights"></ul></article>
         </div>
       </section>
@@ -87,7 +87,7 @@
 
       <section id="view-aging" class="dashboard-view">
         <div id="aging-kpis" class="kpi-grid compact"></div>
-        <div class="synthetic-banner"><strong data-i18n="syntheticTitle">Demonstration data</strong><span data-i18n="syntheticText">Payment and due dates used in AR/AP aging are synthetic. Actual revenue and expense amounts remain unchanged.</span></div>
+        <div class="synthetic-banner"><strong data-i18n="syntheticTitle">Demonstration data</strong><span data-i18n="syntheticText">AR/AP payment timing and aging buckets are synthetic. Past-due percentages refer only to the current open balance, not to all transactions. Actual revenue and expense amounts remain unchanged.</span></div>
         <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p>AR AGING</p><h2 data-i18n="arTitle">Accounts receivable by aging bucket</h2></div></div><div id="ar-aging-chart" class="chart"></div></article><article class="panel"><div class="panel-heading"><div><p>AP AGING</p><h2 data-i18n="apTitle">Accounts payable by aging bucket</h2></div></div><div id="ap-aging-chart" class="chart"></div></article></div>
       </section>
 
@@ -99,6 +99,6 @@
     </main>
 
     <footer><p data-i18n="footer">Portfolio case study by Nicole Oliveira. Built from anonymized and aggregated operational data.</p><a id="footer-portfolio-link" href="index.html#projects" data-i18n="back">Back to portfolio</a></footer>
-    <script src="dashboard.js?v=3d300482" defer></script>
+    <script src="dashboard.js?v=20261008-1" defer></script>
   </body>
 </html>

@@ -40,7 +40,7 @@ main { width: min(1500px, 100%); margin: auto; padding: clamp(42px, 6vw, 84px) c
 .dashboard-intro aside strong { display: block; margin: 8px 0; font-family: Manrope, sans-serif; }
 
 .filter-panel { display: grid; margin: clamp(38px, 5vw, 65px) 0 22px; padding: 18px; align-items: end; border: 1px solid var(--line); border-radius: 20px; background: #fffdf8; box-shadow: var(--shadow); grid-template-columns: repeat(3, minmax(130px, 1fr)) auto minmax(180px, 1.2fr); gap: 12px; }
-.filter-panel label span { display: block; margin: 0 0 7px 3px; color: var(--muted); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.filter-panel > label span, .month-control > span { display: block; margin: 0 0 7px 3px; color: var(--muted); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
 .filter-panel select { width: 100%; min-height: 44px; padding: 0 38px 0 13px; border: 1px solid var(--line); border-radius: 11px; color: var(--ink); background: var(--paper); }
 .filter-panel button { min-height: 44px; padding: 0 18px; border: 0; border-radius: 11px; color: white; background: var(--ink); cursor: pointer; }
 .filter-panel p { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.4; }
@@ -95,11 +95,20 @@ main { width: min(1500px, 100%); margin: auto; padding: clamp(42px, 6vw, 84px) c
 .trend-svg .line { fill: none; stroke: var(--mint-2); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 .trend-svg circle { fill: #fffdf8; stroke: var(--mint-2); stroke-width: 3; }
 
-.comparison-bars { display: flex; min-height: 260px; align-items: end; gap: 10px; overflow-x: auto; }
-.comparison-group { display: grid; min-width: 50px; flex: 1; grid-template-columns: 1fr 1fr; align-items: end; gap: 4px; }
-.comparison-group i { display: block; min-height: 2px; border-radius: 5px 5px 1px 1px; background: var(--mint-2); }
-.comparison-group i:nth-child(2) { background: var(--coral); }
-.comparison-group span { grid-column: 1 / -1; color: var(--muted); font-size: .64rem; text-align: center; }
+.combo-legend { display: flex; margin-bottom: 10px; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: .7rem; }
+.combo-legend span::before { display: inline-block; width: 9px; height: 9px; margin-right: 6px; content: ""; border-radius: 50%; background: var(--mint-2); }
+.combo-legend .expenses::before { background: var(--coral); }
+.combo-legend .result::before { background: rgba(215,184,75,.75); }
+.combo-svg { width: 100%; min-width: 540px; overflow: visible; }
+.combo-svg .zero { stroke: #c7cfc9; stroke-width: 1; }
+.combo-svg .result-area { fill: rgba(215,184,75,.22); stroke: #b2962f; stroke-width: 1.5; }
+.combo-svg .revenue-line, .combo-svg .expense-line { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.combo-svg .revenue-line { stroke: var(--mint-2); }
+.combo-svg .expense-line { stroke: var(--coral); }
+.combo-svg .revenue-point { fill: var(--mint-2); }
+.combo-svg .expense-point { fill: var(--coral); }
+.combo-svg text { fill: var(--muted); font-size: 10px; }
+#revenue-expense-chart { overflow-x: auto; }
 
 .insight-panel { color: var(--paper); background: var(--ink); }
 .insight-panel h2 { color: white; }
@@ -162,3 +171,12 @@ footer a { color: var(--mint); font-weight: 700; }
   .panel { padding: 18px; }
   .synthetic-banner { align-items: start; flex-direction: column; }
 }
+.month-control { position: relative; min-width: 0; }
+.multi-select { position: relative; }
+.multi-select summary { display: flex; min-height: 44px; padding: 0 13px; align-items: center; justify-content: space-between; overflow: hidden; border: 1px solid var(--line); border-radius: 11px; background: var(--paper); cursor: pointer; font-size: .84rem; text-overflow: ellipsis; white-space: nowrap; list-style: none; }
+.multi-select summary::-webkit-details-marker { display: none; }
+.multi-select summary::after { content: "⌄"; font-size: 1rem; }
+.month-options { position: absolute; z-index: 20; top: calc(100% + 7px); left: 0; display: grid; width: max(100%, 210px); max-height: 285px; padding: 10px; overflow-y: auto; border: 1px solid var(--line); border-radius: 13px; background: #fffdf8; box-shadow: var(--shadow); grid-template-columns: 1fr 1fr; gap: 4px; }
+.month-options label { display: flex; padding: 8px; align-items: center; gap: 8px; border-radius: 8px; cursor: pointer; font-size: .76rem; text-transform: capitalize; }
+.month-options label:hover { background: var(--paper-2); }
+.month-options input { accent-color: var(--ink); }
