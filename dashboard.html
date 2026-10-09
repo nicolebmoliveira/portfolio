@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="dashboard.css?v=20261008-1" />
+    <link rel="stylesheet" href="dashboard.css?v=20261009-2" />
   </head>
   <body>
     <header class="dashboard-header">
@@ -63,7 +63,7 @@
           <article class="panel"><div class="panel-heading"><div><p data-i18n="mixLabel">SERVICE MIX</p><h2 data-i18n="mixTitle">Revenue concentration</h2></div></div><div id="service-mix" class="chart"></div></article>
         </div>
         <div class="dashboard-grid equal">
-          <article class="panel"><div class="panel-heading"><div><p data-i18n="comparisonLabel">MONTHLY COMPARISON</p><h2 data-i18n="comparisonTitle">Revenue, cash outflows, and net result</h2></div></div><div id="revenue-expense-chart" class="chart"></div></article>
+          <article class="panel"><div class="panel-heading comparison-heading"><div><p data-i18n="comparisonLabel">MONTHLY COMPARISON</p><h2 data-i18n="comparisonTitle">Revenue, COGS, and gross profit</h2></div><label class="chart-period-control"><span data-i18n="chartPeriod">Chart period</span><select id="comparison-period"><option value="ytd" data-i18n="chartYtd">Year to date (YTD)</option><option value="selected" data-i18n="chartSelected">Selected period</option></select></label></div><div id="comparison-period-note" class="chart-period-note"></div><div id="revenue-expense-chart" class="chart"></div></article>
           <article class="panel insight-panel"><p data-i18n="insightsLabel">MANAGEMENT INSIGHTS</p><h2 data-i18n="insightsTitle">What the selected period suggests</h2><ul id="dynamic-insights"></ul></article>
         </div>
       </section>
@@ -99,6 +99,6 @@
     </main>
 
     <footer><p data-i18n="footer">Portfolio case study by Nicole Oliveira. Built from anonymized and aggregated operational data.</p><a id="footer-portfolio-link" href="index.html#projects" data-i18n="back">Back to portfolio</a></footer>
-    <script src="dashboard.js?v=20261008-1" defer></script>
+    <script src="dashboard.js?v=20261009-2" defer></script>
   </body>
 </html>

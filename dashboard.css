@@ -96,6 +96,10 @@ main { width: min(1500px, 100%); margin: auto; padding: clamp(42px, 6vw, 84px) c
 .trend-svg circle { fill: #fffdf8; stroke: var(--mint-2); stroke-width: 3; }
 
 .combo-legend { display: flex; margin-bottom: 10px; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: .7rem; }
+.comparison-heading { align-items: end; }
+.chart-period-control { display: grid; min-width: 175px; gap: 6px; color: var(--muted); font-size: .65rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.chart-period-control select { min-height: 38px; padding: 0 32px 0 10px; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); background: var(--paper); font: 500 .72rem "DM Sans", sans-serif; text-transform: none; letter-spacing: 0; }
+.chart-period-note { margin: -12px 0 12px; color: var(--muted); font-size: .68rem; }
 .combo-legend span::before { display: inline-block; width: 9px; height: 9px; margin-right: 6px; content: ""; border-radius: 50%; background: var(--mint-2); }
 .combo-legend .expenses::before { background: var(--coral); }
 .combo-legend .result::before { background: rgba(215,184,75,.75); }
@@ -174,6 +178,8 @@ footer a { color: var(--mint); font-weight: 700; }
   .kpi { min-height: 120px; }
   .panel { padding: 18px; }
   .synthetic-banner { align-items: start; flex-direction: column; }
+  .comparison-heading { align-items: start; flex-direction: column; }
+  .chart-period-control { width: 100%; }
 }
 .month-control { position: relative; min-width: 0; }
 .multi-select { position: relative; }

@@ -19,7 +19,7 @@ const translations = {
     ticketKpi: "Average ticket", occupancyKpi: "Theoretical occupancy", practicalKpi: "Billable-capacity utilization", arOpenKpi: "Open AR (synthetic)", apOpenKpi: "Open AP (synthetic)",
     expensesKpi: "Cash outflows", operatingKpi: "Operating cash outflows", investingKpi: "Investing cash outflows", financingKpi: "Financing cash outflows", customersKpi: "Customers",
     repeatKpi: "Repeat customer rate", top10Kpi: "Top 10 revenue share", salesCustomerKpi: "Sales per customer", selected: "Selected", periodOne: "month", periods: "months", noData: "No data for the selected filters.", arOnTimeKpi: "AR paid on time (synthetic)", apOnTimeKpi: "AP paid on time (synthetic)", overdueOpen: "of open balance is past due", netResult: "Gross profit", serviceCosts: "COGS",
-    actual: "Actual", list: "List", customersNote: "Customer metrics are shown by full year to protect privacy and avoid double counting across months.",
+    actual: "Actual", list: "List", customersNote: "Customer metrics are shown by full year to protect privacy and avoid double counting across months.", chartPeriod: "Chart period", chartYtd: "Year to date (YTD)", chartSelected: "Selected period", chartYtdNote: "Monthly view through", chartSelectedNote: "Chart follows the dashboard period filter",
   },
   pt: {
     status: "Dados até set/2026", eyebrow: "DESEMPENHO FINANCEIRO • ESTUDO DE CASO", title: "Dashboard de uma empresa de massoterapia",
@@ -41,7 +41,7 @@ const translations = {
     ticketKpi: "Ticket médio", occupancyKpi: "Ocupação teórica", practicalKpi: "Utilização da capacidade faturável", arOpenKpi: "AR em aberto (sintético)", apOpenKpi: "AP em aberto (sintético)",
     expensesKpi: "Saídas de caixa", operatingKpi: "Saídas operacionais", investingKpi: "Saídas de investimento", financingKpi: "Saídas de financiamento", customersKpi: "Clientes",
     repeatKpi: "Taxa de recompra", top10Kpi: "Participação dos 10 maiores", salesCustomerKpi: "Vendas por cliente", selected: "Selecionado", periodOne: "mês", periods: "meses", noData: "Não há dados para os filtros selecionados.", arOnTimeKpi: "AR pago em dia (sintético)", apOnTimeKpi: "AP pago em dia (sintético)", overdueOpen: "do saldo em aberto está vencido", netResult: "Lucro bruto", serviceCosts: "CSP",
-    actual: "Realizado", list: "Tabela", customersNote: "Os indicadores de clientes são apresentados por ano completo para preservar a privacidade e evitar dupla contagem entre meses.",
+    actual: "Realizado", list: "Tabela", customersNote: "Os indicadores de clientes são apresentados por ano completo para preservar a privacidade e evitar dupla contagem entre meses.", chartPeriod: "Período do gráfico", chartYtd: "Acumulado no ano (YTD)", chartSelected: "Período selecionado", chartYtdNote: "Visão mensal até", chartSelectedNote: "O gráfico acompanha o filtro de período do painel",
   },
 };
 
@@ -85,12 +85,13 @@ const businessLabels = {
 const businessLabel = (label) => lang === "en" ? (businessLabels[label] || label) : label;
 
 let data;
-const state = { year: "2026", months: [], service: "all", view: "executive" };
+const state = { year: "2026", months: [], service: "all", view: "executive", comparisonPeriod: "ytd" };
 const yearFilter = document.querySelector("#year-filter");
 const monthFilter = document.querySelector("#month-filter");
 const monthOptions = document.querySelector("#month-options");
 const monthSummary = document.querySelector("#month-summary");
 const serviceFilter = document.querySelector("#service-filter");
+const comparisonPeriod = document.querySelector("#comparison-period");
 
 const sum = (values) => values.reduce((a, b) => a + (Number(b) || 0), 0);
 const addMaps = (target, source) => Object.entries(source || {}).forEach(([key, value]) => { target[key] = (target[key] || 0) + Number(value || 0); });
@@ -98,6 +99,13 @@ const monthName = (month) => new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "
 
 function selectedMonths(year = state.year) {
   return data.monthly.filter((row) => (year === "all" || row.month.startsWith(year)) && (!state.months.length || state.months.includes(row.month.slice(5, 7))));
+}
+
+function comparisonRows(rows) {
+  if (state.comparisonPeriod !== "ytd" || state.year === "all") return rows;
+  const available = data.monthly.filter((row) => row.month.startsWith(state.year));
+  const throughMonth = state.months.length ? Math.max(...state.months.map(Number)) : Math.max(...available.map((row) => Number(row.month.slice(5, 7))));
+  return available.filter((row) => Number(row.month.slice(5, 7)) <= throughMonth);
 }
 
 function aggregateRows(rows = selectedMonths()) {
@@ -181,6 +189,7 @@ function capacityChart(rows) {
 
 function render() {
   const rows = selectedMonths();
+  const comparisonData = comparisonRows(rows);
   const agg = aggregateRows(rows);
   const growth = priorYearGrowth(agg);
   document.querySelector("#filter-summary").textContent = `${t.selected}: ${rows.length} ${rows.length === 1 ? t.periodOne : t.periods} · ${fmtMoney.format(agg.revenue)} · ${fmtNumber.format(agg.sessions)} ${t.sessionsKpi.toLowerCase()}`;
@@ -193,7 +202,9 @@ function render() {
   document.querySelector("#revenue-trend").innerHTML = lineChart(rows);
   document.querySelector("#trend-total").textContent = fmtMoney.format(agg.revenue);
   document.querySelector("#service-mix").innerHTML = donut(agg.services);
-  document.querySelector("#revenue-expense-chart").innerHTML = comparisonChart(rows);
+  document.querySelector("#revenue-expense-chart").innerHTML = comparisonChart(comparisonData);
+  const comparisonEnd = comparisonData.at(-1);
+  document.querySelector("#comparison-period-note").textContent = state.comparisonPeriod === "ytd" && state.year !== "all" && comparisonEnd ? `${t.chartYtdNote} ${monthName(comparisonEnd.month)}` : t.chartSelectedNote;
   const services = Object.values(agg.services).sort((a,b)=>b.revenue-a.revenue);
   const top = services[0]; const lowMargin = [...services].sort((a,b)=>(a.revenue?a.contribution/a.revenue:0)-(b.revenue?b.contribution/b.revenue:0))[0];
   document.querySelector("#dynamic-insights").innerHTML = lang === "pt"
@@ -247,7 +258,8 @@ yearFilter.addEventListener("change",()=>{state.year=yearFilter.value;render();}
 function updateMonthSummary(){const names=state.months.map((m)=>new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en-US",{month:"short",timeZone:"UTC"}).format(new Date(`2026-${m}-01T00:00:00Z`)));monthSummary.textContent=names.length?names.join(", "):t.allMonths;}
 monthOptions.addEventListener("change",()=>{state.months=[...monthOptions.querySelectorAll("input:checked")].map((input)=>input.value);updateMonthSummary();render();});
 serviceFilter.addEventListener("change",()=>{state.service=serviceFilter.value;render();});
-document.querySelector("#reset-filters").addEventListener("click",()=>{state.year="2026";state.months=[];state.service="all";yearFilter.value=state.year;serviceFilter.value=state.service;monthOptions.querySelectorAll("input").forEach((input)=>{input.checked=false;});updateMonthSummary();render();});
+comparisonPeriod.addEventListener("change",()=>{state.comparisonPeriod=comparisonPeriod.value;render();});
+document.querySelector("#reset-filters").addEventListener("click",()=>{state.year="2026";state.months=[];state.service="all";state.comparisonPeriod="ytd";yearFilter.value=state.year;serviceFilter.value=state.service;comparisonPeriod.value=state.comparisonPeriod;monthOptions.querySelectorAll("input").forEach((input)=>{input.checked=false;});updateMonthSummary();render();});
 
 fetch("dashboard-data.json?v=20261008-1")
   .then((response)=>{if(!response.ok) throw new Error("Data unavailable"); return response.json();})
