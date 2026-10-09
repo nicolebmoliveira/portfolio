@@ -108,6 +108,10 @@ main { width: min(1500px, 100%); margin: auto; padding: clamp(42px, 6vw, 84px) c
 .combo-svg .revenue-point { fill: var(--mint-2); }
 .combo-svg .expense-point { fill: var(--coral); }
 .combo-svg text { fill: var(--muted); font-size: 10px; }
+.combo-svg .value-label { paint-order: stroke; stroke: #fffdf8; stroke-width: 4px; stroke-linejoin: round; font-size: 9px; font-weight: 700; }
+.combo-svg .revenue-value { fill: #28785d; }
+.combo-svg .expense-value { fill: #bd543d; }
+.combo-svg .result-value { fill: #92791d; }
 #revenue-expense-chart { overflow-x: auto; }
 
 .insight-panel { color: var(--paper); background: var(--ink); }
