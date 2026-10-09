@@ -4,9 +4,9 @@ const translations = {
     subtitle: "Revenue, profitability, working capital, service mix, and capacity in one decision-ready view.", modelLabel: "MODEL", modelValue: "Actuals + allocated service costs",
     modelNote: "AR/AP due dates are synthetic and clearly separated from actual financial records.", year: "Year", month: "Month", service: "Service", reset: "Reset filters",
     tabExecutive: "Executive", tabProfitability: "Profitability", tabCustomers: "Customers", tabCashflow: "Expenses & cash", tabAging: "AR / AP aging", tabCapacity: "Capacity",
-    trendLabel: "PERFORMANCE TREND", trendTitle: "Monthly revenue", mixLabel: "SERVICE MIX", mixTitle: "Revenue concentration", comparisonLabel: "MONTHLY COMPARISON",
+    trendLabel: "PERFORMANCE TREND", trendTitle: "Monthly revenue", dreLabel: "MANAGEMENT P&L", dreTitle: "Simplified income statement", dreNote: "Service costs include products, shared materials, and allocated labor and fixed costs. Gross profit differs from the former cash result (revenue minus cash outflows); investing and financing remain in the cash analysis.", mixLabel: "SERVICE MIX", mixTitle: "Revenue concentration", comparisonLabel: "MONTHLY COMPARISON",
     comparisonTitle: "Revenue, COGS, and gross profit", insightsLabel: "MANAGEMENT INSIGHTS", insightsTitle: "What the selected period suggests", economicsLabel: "SERVICE ECONOMICS",
-    economicsTitle: "Revenue, gross profit, gross margin, and profit per hour", revenue: "Revenue", sales: "Sales", hours: "Hours", contribution: "Gross profit", margin: "Gross margin", profitHour: "Profit / hour",
+    economicsTitle: "Packages sold and contribution by service", revenue: "Revenue", sales: "Sales", hours: "Hours", contribution: "Gross profit", margin: "Gross margin", profitHour: "Profit / hour", packages: "Packages", packageMix: "Package mix", revenueMix: "Revenue mix", profitMix: "Gross profit mix",
     marginLabel: "MARGIN PROFILE", marginTitle: "Gross margin by service", pricingLabel: "PRICING SIGNAL", pricingTitle: "Average realized price vs list price",
     retentionLabel: "RETENTION", retentionTitle: "Repeat customer rate by year", customerActionLabel: "CUSTOMER ACTIONS", customerActionTitle: "How to turn retention into growth",
     expenseLabel: "EXPENSE STRUCTURE", expenseTitle: "Spending by accounting group", cashLabel: "CASH FLOW CLASSIFICATION", cashTitle: "Operating, investing, and financing",
@@ -19,16 +19,16 @@ const translations = {
     ticketKpi: "Average ticket", occupancyKpi: "Theoretical occupancy", practicalKpi: "Billable-capacity utilization", arOpenKpi: "Open AR (synthetic)", apOpenKpi: "Open AP (synthetic)",
     expensesKpi: "Cash outflows", operatingKpi: "Operating cash outflows", investingKpi: "Investing cash outflows", financingKpi: "Financing cash outflows", customersKpi: "Customers",
     repeatKpi: "Repeat customer rate", top10Kpi: "Top 10 revenue share", salesCustomerKpi: "Sales per customer", selected: "Selected", periodOne: "month", periods: "months", noData: "No data for the selected filters.", arOnTimeKpi: "AR paid on time (synthetic)", apOnTimeKpi: "AP paid on time (synthetic)", overdueOpen: "of open balance is past due", netResult: "Gross profit", serviceCosts: "COGS",
-    actual: "Actual", list: "List", customersNote: "Customer metrics are shown by full year to protect privacy and avoid double counting across months.", chartPeriod: "Chart period", chartYtd: "Year to date (YTD)", chartSelected: "Selected period", chartYtdNote: "Monthly view through", chartSelectedNote: "Chart follows the dashboard period filter",
+    actual: "Actual", list: "List", customersNote: "Customer metrics are shown by full year to protect privacy and avoid double counting across months.", chartPeriod: "Chart period", chartYtd: "Year to date (YTD)", chartSelected: "Selected period", chartYtdNote: "Monthly view through", chartSelectedNote: "Chart follows the dashboard period filter", selectedPeriod: "Selected period", ytd: "Year to date", productCosts: "Product costs", sharedMaterials: "Shared materials", laborFixed: "Labor and fixed-cost allocation", totalCogs: "Total COGS", grossProfit: "Gross profit", grossMargin: "Gross margin", packagesSold: "Packages sold",
   },
   pt: {
     status: "Dados até set/2026", eyebrow: "DESEMPENHO FINANCEIRO • ESTUDO DE CASO", title: "Dashboard de uma empresa de massoterapia",
     subtitle: "Receita, rentabilidade, capital de giro, mix de serviços e capacidade em uma visão voltada à decisão.", modelLabel: "MODELO", modelValue: "Realizado + custos dos serviços rateados",
     modelNote: "Os vencimentos de AR/AP são sintéticos e estão separados dos registros financeiros reais.", year: "Ano", month: "Mês", service: "Serviço", reset: "Limpar filtros",
     tabExecutive: "Executivo", tabProfitability: "Rentabilidade", tabCustomers: "Clientes", tabCashflow: "Gastos e caixa", tabAging: "Aging de AR / AP", tabCapacity: "Capacidade",
-    trendLabel: "TENDÊNCIA DE DESEMPENHO", trendTitle: "Receita mensal", mixLabel: "MIX DE SERVIÇOS", mixTitle: "Concentração da receita", comparisonLabel: "COMPARAÇÃO MENSAL",
+    trendLabel: "TENDÊNCIA DE DESEMPENHO", trendTitle: "Receita mensal", dreLabel: "DRE GERENCIAL", dreTitle: "Demonstração de resultado simplificada", dreNote: "Os custos dos serviços incluem produtos, materiais compartilhados e o rateio de mão de obra e custos fixos. O lucro bruto difere do antigo resultado de caixa (receita menos gastos); investimentos e financiamentos permanecem na análise de caixa.", mixLabel: "MIX DE SERVIÇOS", mixTitle: "Concentração da receita", comparisonLabel: "COMPARAÇÃO MENSAL",
     comparisonTitle: "Receita, CSP e lucro bruto", insightsLabel: "INSIGHTS GERENCIAIS", insightsTitle: "O que o período selecionado indica", economicsLabel: "ECONOMIA DOS SERVIÇOS",
-    economicsTitle: "Receita, lucro bruto, margem bruta e lucro por hora", revenue: "Receita", sales: "Vendas", hours: "Horas", contribution: "Lucro bruto", margin: "Margem bruta", profitHour: "Lucro / hora",
+    economicsTitle: "Pacotes vendidos e contribuição por serviço", revenue: "Receita", sales: "Vendas", hours: "Horas", contribution: "Lucro bruto", margin: "Margem bruta", profitHour: "Lucro / hora", packages: "Pacotes", packageMix: "Mix de pacotes", revenueMix: "Mix de receita", profitMix: "Mix de lucro bruto",
     marginLabel: "PERFIL DE MARGEM", marginTitle: "Margem bruta por serviço", pricingLabel: "SINAL DE PREÇO", pricingTitle: "Preço médio realizado versus preço de tabela",
     retentionLabel: "RETENÇÃO", retentionTitle: "Taxa de recompra por ano", customerActionLabel: "AÇÕES DE CLIENTES", customerActionTitle: "Como transformar retenção em crescimento",
     expenseLabel: "ESTRUTURA DE GASTOS", expenseTitle: "Gastos por grupo contábil", cashLabel: "CLASSIFICAÇÃO DO FLUXO DE CAIXA", cashTitle: "Operacional, investimento e financiamento",
@@ -41,7 +41,7 @@ const translations = {
     ticketKpi: "Ticket médio", occupancyKpi: "Ocupação teórica", practicalKpi: "Utilização da capacidade faturável", arOpenKpi: "AR em aberto (sintético)", apOpenKpi: "AP em aberto (sintético)",
     expensesKpi: "Saídas de caixa", operatingKpi: "Saídas operacionais", investingKpi: "Saídas de investimento", financingKpi: "Saídas de financiamento", customersKpi: "Clientes",
     repeatKpi: "Taxa de recompra", top10Kpi: "Participação dos 10 maiores", salesCustomerKpi: "Vendas por cliente", selected: "Selecionado", periodOne: "mês", periods: "meses", noData: "Não há dados para os filtros selecionados.", arOnTimeKpi: "AR pago em dia (sintético)", apOnTimeKpi: "AP pago em dia (sintético)", overdueOpen: "do saldo em aberto está vencido", netResult: "Lucro bruto", serviceCosts: "CSP",
-    actual: "Realizado", list: "Tabela", customersNote: "Os indicadores de clientes são apresentados por ano completo para preservar a privacidade e evitar dupla contagem entre meses.", chartPeriod: "Período do gráfico", chartYtd: "Acumulado no ano (YTD)", chartSelected: "Período selecionado", chartYtdNote: "Visão mensal até", chartSelectedNote: "O gráfico acompanha o filtro de período do painel",
+    actual: "Realizado", list: "Tabela", customersNote: "Os indicadores de clientes são apresentados por ano completo para preservar a privacidade e evitar dupla contagem entre meses.", chartPeriod: "Período do gráfico", chartYtd: "Acumulado no ano (YTD)", chartSelected: "Período selecionado", chartYtdNote: "Visão mensal até", chartSelectedNote: "O gráfico acompanha o filtro de período do painel", selectedPeriod: "Período selecionado", ytd: "Acumulado no ano", productCosts: "Custos de produtos", sharedMaterials: "Materiais compartilhados", laborFixed: "Mão de obra e custos fixos rateados", totalCogs: "CSP total", grossProfit: "Lucro bruto", grossMargin: "Margem bruta", packagesSold: "Pacotes vendidos",
   },
 };
 
@@ -102,7 +102,12 @@ function selectedMonths(year = state.year) {
 }
 
 function comparisonRows(rows) {
-  if (state.comparisonPeriod !== "ytd" || state.year === "all") return rows;
+  if (state.comparisonPeriod !== "ytd") return rows;
+  return yearToDateRows(rows);
+}
+
+function yearToDateRows(rows) {
+  if (state.year === "all") return rows;
   const available = data.monthly.filter((row) => row.month.startsWith(state.year));
   const throughMonth = state.months.length ? Math.max(...state.months.map(Number)) : Math.max(...available.map((row) => Number(row.month.slice(5, 7))));
   return available.filter((row) => Number(row.month.slice(5, 7)) <= throughMonth);
@@ -130,6 +135,28 @@ function aggregateRows(rows = selectedMonths()) {
   result.occupancy = rows.length ? result.hours / (data.meta.capacity_hours * rows.length) : 0;
   result.practicalOccupancy = rows.length ? result.hours / (data.meta.capacity_hours * data.meta.billable_capacity_rate * rows.length) : 0;
   return result;
+}
+
+function dreMetrics(rows) {
+  const result = { revenue: 0, productCosts: 0, sharedMaterials: 0, laborFixed: 0, cogs: 0, packages: 0 };
+  rows.forEach((row) => row.services.filter((service) => state.service === "all" || service.service === state.service).forEach((service) => {
+    const model = data.service_model[service.service] || {};
+    const packages = Number(service.sales || 0);
+    result.revenue += Number(service.revenue || 0);
+    result.packages += packages;
+    result.cogs += Number(service.modeled_cost || 0);
+    result.productCosts += packages * Number(model.product_cost || 0);
+    result.sharedMaterials += packages * Number(model.shared_cost || 0);
+  }));
+  result.laborFixed = result.cogs - result.productCosts - result.sharedMaterials;
+  result.grossProfit = result.revenue - result.cogs;
+  result.grossMargin = result.revenue ? result.grossProfit / result.revenue : 0;
+  return result;
+}
+
+function dreReport(selected, ytd) {
+  const amountRow = (label, key, className = "") => `<tr class="${className}"><th>${label}</th><td>${fmtMoney.format(selected[key])}</td><td>${fmtMoney.format(ytd[key])}</td></tr>`;
+  return `<table class="dre-table"><thead><tr><th></th><th>${t.selectedPeriod}</th><th>${t.ytd}</th></tr></thead><tbody>${amountRow(t.revenue,"revenue","revenue-row")}${amountRow(`(−) ${t.productCosts}`,"productCosts")}${amountRow(`(−) ${t.sharedMaterials}`,"sharedMaterials")}${amountRow(`(−) ${t.laborFixed}`,"laborFixed")}${amountRow(t.totalCogs,"cogs","subtotal-row")}${amountRow(t.grossProfit,"grossProfit","total-row")}<tr class="margin-row"><th>${t.grossMargin}</th><td>${fmtPercent(selected.grossMargin)}</td><td>${fmtPercent(ytd.grossMargin)}</td></tr><tr><th>${t.packagesSold}</th><td>${fmtNumber.format(selected.packages)}</td><td>${fmtNumber.format(ytd.packages)}</td></tr></tbody></table>`;
 }
 
 function priorYearGrowth(current) {
@@ -167,7 +194,7 @@ function donut(serviceMap) {
   if (!total) return `<p>${t.noData}</p>`;
   let position = 0;
   const segments = entries.map((s, i) => { const start = position; position += s.revenue / total * 100; return `${colors[i % colors.length]} ${start}% ${position}%`; });
-  return `<div class="donut-wrap"><div class="data-donut" style="background:conic-gradient(${segments.join(",")})"><div class="donut-center"><strong>${fmtMoney.format(total)}</strong><span>${t.revenue}</span></div></div><div class="legend">${entries.slice(0,6).map((s,i)=>`<div><i style="background:${colors[i % colors.length]}"></i><span>${s.service}</span><b>${fmtPercent(s.revenue/total)}</b></div>`).join("")}</div></div>`;
+  return `<div class="donut-wrap"><div class="data-donut" style="background:conic-gradient(${segments.join(",")})"><div class="donut-center"><strong>${fmtMoney.format(total)}</strong><span>${t.revenue}</span></div></div><div class="legend">${entries.slice(0,6).map((s,i)=>`<div><i style="background:${colors[i % colors.length]}"></i><span>${s.service}</span><b>${fmtMoney.format(s.revenue)} · ${fmtPercent(s.revenue/total)}</b></div>`).join("")}</div></div>`;
 }
 
 function comparisonChart(rows) {
@@ -190,6 +217,7 @@ function capacityChart(rows) {
 function render() {
   const rows = selectedMonths();
   const comparisonData = comparisonRows(rows);
+  const ytdData = yearToDateRows(rows);
   const agg = aggregateRows(rows);
   const growth = priorYearGrowth(agg);
   document.querySelector("#filter-summary").textContent = `${t.selected}: ${rows.length} ${rows.length === 1 ? t.periodOne : t.periods} · ${fmtMoney.format(agg.revenue)} · ${fmtNumber.format(agg.sessions)} ${t.sessionsKpi.toLowerCase()}`;
@@ -199,8 +227,7 @@ function render() {
     kpi(t.sessionsKpi, fmtNumber.format(agg.sessions), `${fmtNumber.format(agg.hours)} h`),
     kpi(t.practicalKpi, fmtPercent(agg.practicalOccupancy), `${t.occupancyKpi}: ${fmtPercent(agg.occupancy)}`, agg.practicalOccupancy > 1),
   ].join("");
-  document.querySelector("#revenue-trend").innerHTML = lineChart(rows);
-  document.querySelector("#trend-total").textContent = fmtMoney.format(agg.revenue);
+  document.querySelector("#dre-report").innerHTML = dreReport(dreMetrics(rows), dreMetrics(ytdData));
   document.querySelector("#service-mix").innerHTML = donut(agg.services);
   document.querySelector("#revenue-expense-chart").innerHTML = comparisonChart(comparisonData);
   const comparisonEnd = comparisonData.at(-1);
@@ -211,8 +238,8 @@ function render() {
     ? `<li>${growth === null ? "Use os filtros anuais para comparar o crescimento." : `A receita variou ${fmtPercent(Math.abs(growth))} ${growth >= 0 ? "acima" : "abaixo"} do período equivalente anterior.`}</li><li>${top ? `${top.service} liderou o período com ${fmtPercent(top.revenue/agg.revenue)} da receita.` : t.noData}</li><li>${lowMargin ? `${lowMargin.service} apresentou a menor margem bruta do recorte: ${fmtPercent(lowMargin.contribution/lowMargin.revenue)}.` : t.noData}</li><li>${agg.practicalOccupancy >= .85 ? "A capacidade faturável está pressionada; priorize preço, margem e gestão de agenda." : "Ainda há capacidade faturável para crescer com retenção e campanhas seletivas."}</li>`
     : `<li>${growth === null ? "Use annual filters to compare growth." : `Revenue was ${fmtPercent(Math.abs(growth))} ${growth >= 0 ? "above" : "below"} the comparable prior period.`}</li><li>${top ? `${top.service} led the period with ${fmtPercent(top.revenue/agg.revenue)} of revenue.` : t.noData}</li><li>${lowMargin ? `${lowMargin.service} had the lowest gross margin in the selection: ${fmtPercent(lowMargin.contribution/lowMargin.revenue)}.` : t.noData}</li><li>${agg.practicalOccupancy >= .85 ? "Billable capacity is tight; prioritize pricing, margin, and schedule management." : "Billable capacity remains available for retention-led and selective campaign growth."}</li>`;
 
-  document.querySelector("#profitability-kpis").innerHTML = [kpi(t.contributionKpi,fmtMoney.format(agg.contribution),fmtPercent(agg.margin)),kpi(t.ticketKpi,fmtMoney.format(agg.avgTicket),`${fmtNumber.format(agg.sales)} ${t.sales.toLowerCase()}`),kpi(t.hours,`${fmtNumber.format(agg.hours)} h`,`${fmtNumber.format(agg.hours?agg.contribution/agg.hours:0)} / h`),kpi(t.service,fmtNumber.format(services.length),"")].join("");
-  document.querySelector("#service-table").innerHTML = services.map((s)=>{const margin=s.revenue?s.contribution/s.revenue:0;return `<tr><td><strong>${s.service}</strong></td><td>${fmtMoney.format(s.revenue)}</td><td>${fmtNumber.format(s.sales)}</td><td>${fmtNumber.format(s.hours)}</td><td>${fmtMoney.format(s.contribution)}</td><td><span class="margin-pill ${margin<.4?"low":""}">${fmtPercent(margin)}</span></td><td>${fmtMoney.format(s.hours?s.contribution/s.hours:0)}</td></tr>`}).join("");
+  document.querySelector("#profitability-kpis").innerHTML = [kpi(t.contributionKpi,fmtMoney.format(agg.contribution),fmtPercent(agg.margin)),kpi(t.ticketKpi,fmtMoney.format(agg.avgTicket),`${fmtNumber.format(agg.sales)} ${t.packages.toLowerCase()}`),kpi(t.packagesSold,fmtNumber.format(agg.sales),`${fmtNumber.format(agg.sessions)} ${t.sessionsKpi.toLowerCase()}`),kpi(t.service,fmtNumber.format(services.length),"")].join("");
+  document.querySelector("#service-table").innerHTML = services.map((s)=>{const margin=s.revenue?s.contribution/s.revenue:0;return `<tr><td><strong>${s.service}</strong></td><td>${fmtNumber.format(s.sales)}</td><td>${fmtPercent(agg.sales?s.sales/agg.sales:0)}</td><td>${fmtMoney.format(s.revenue)}</td><td>${fmtPercent(agg.revenue?s.revenue/agg.revenue:0)}</td><td>${fmtMoney.format(s.contribution)}</td><td>${fmtPercent(agg.contribution?s.contribution/agg.contribution:0)}</td><td><span class="margin-pill ${margin<.4?"low":""}">${fmtPercent(margin)}</span></td></tr>`}).join("");
   document.querySelector("#margin-chart").innerHTML = barList(Object.fromEntries(services.map((s)=>[s.service,s.revenue?s.contribution/s.revenue:0])),fmtPercent);
   document.querySelector("#pricing-chart").innerHTML = barList(Object.fromEntries(services.map((s)=>[s.service,s.sales?s.revenue/s.sales:0])),(value)=>fmtMoney.format(value));
 

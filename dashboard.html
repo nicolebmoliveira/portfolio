@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="dashboard.css?v=20261009-2" />
+    <link rel="stylesheet" href="dashboard.css?v=20261009-3" />
   </head>
   <body>
     <header class="dashboard-header">
@@ -59,7 +59,7 @@
       <section id="view-executive" class="dashboard-view active">
         <div id="executive-kpis" class="kpi-grid"></div>
         <div class="dashboard-grid wide-left">
-          <article class="panel"><div class="panel-heading"><div><p data-i18n="trendLabel">PERFORMANCE TREND</p><h2 data-i18n="trendTitle">Monthly revenue</h2></div><span id="trend-total"></span></div><div id="revenue-trend" class="chart"></div></article>
+          <article class="panel"><div class="panel-heading"><div><p data-i18n="dreLabel">MANAGEMENT P&amp;L</p><h2 data-i18n="dreTitle">Simplified income statement</h2></div></div><div id="dre-report" class="dre-report"></div><p class="report-note" data-i18n="dreNote">Service costs include products, shared materials, and allocated labor and fixed costs. Gross profit differs from the former cash result; investments and financing remain in the cash analysis.</p></article>
           <article class="panel"><div class="panel-heading"><div><p data-i18n="mixLabel">SERVICE MIX</p><h2 data-i18n="mixTitle">Revenue concentration</h2></div></div><div id="service-mix" class="chart"></div></article>
         </div>
         <div class="dashboard-grid equal">
@@ -70,7 +70,7 @@
 
       <section id="view-profitability" class="dashboard-view">
         <div id="profitability-kpis" class="kpi-grid compact"></div>
-        <article class="panel"><div class="panel-heading"><div><p data-i18n="economicsLabel">SERVICE ECONOMICS</p><h2 data-i18n="economicsTitle">Revenue, contribution, margin, and profit per hour</h2></div></div><div class="table-wrap"><table><thead><tr><th data-i18n="service">Service</th><th data-i18n="revenue">Revenue</th><th data-i18n="sales">Sales</th><th data-i18n="hours">Hours</th><th data-i18n="contribution">Contribution</th><th data-i18n="margin">Margin</th><th data-i18n="profitHour">Profit / hour</th></tr></thead><tbody id="service-table"></tbody></table></div></article>
+        <article class="panel"><div class="panel-heading"><div><p data-i18n="economicsLabel">SERVICE ECONOMICS</p><h2 data-i18n="economicsTitle">Packages sold and contribution by service</h2></div></div><div class="table-wrap"><table><thead><tr><th data-i18n="service">Service</th><th data-i18n="packages">Packages</th><th data-i18n="packageMix">Package mix</th><th data-i18n="revenue">Revenue</th><th data-i18n="revenueMix">Revenue mix</th><th data-i18n="contribution">Gross profit</th><th data-i18n="profitMix">Gross profit mix</th><th data-i18n="margin">Gross margin</th></tr></thead><tbody id="service-table"></tbody></table></div></article>
         <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p data-i18n="marginLabel">MARGIN PROFILE</p><h2 data-i18n="marginTitle">Contribution margin by service</h2></div></div><div id="margin-chart" class="chart"></div></article><article class="panel"><div class="panel-heading"><div><p data-i18n="pricingLabel">PRICING SIGNAL</p><h2 data-i18n="pricingTitle">Average realized price vs list price</h2></div></div><div id="pricing-chart" class="chart"></div></article></div>
       </section>
 
@@ -99,6 +99,6 @@
     </main>
 
     <footer><p data-i18n="footer">Portfolio case study by Nicole Oliveira. Built from anonymized and aggregated operational data.</p><a id="footer-portfolio-link" href="index.html#projects" data-i18n="back">Back to portfolio</a></footer>
-    <script src="dashboard.js?v=20261009-2" defer></script>
+    <script src="dashboard.js?v=20261009-3" defer></script>
   </body>
 </html>
