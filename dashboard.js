@@ -3,7 +3,7 @@ const translations = {
     status: "Data through Sep 2026", eyebrow: "FINANCIAL PERFORMANCE • CASE STUDY", title: "Massage therapy business dashboard",
     subtitle: "Revenue, profitability, working capital, service mix, and capacity in one decision-ready view.", modelLabel: "MODEL", modelValue: "Actuals + allocated service costs",
     modelNote: "AR/AP due dates are synthetic and clearly separated from actual financial records.", year: "Year", month: "Month", service: "Service", reset: "Reset filters",
-    tabExecutive: "Executive", tabProfitability: "Profitability", tabCustomers: "Customers", tabCashflow: "Expenses & cash", tabAging: "AR / AP aging", tabCapacity: "Capacity",
+    tabExecutive: "Executive", tabProfitability: "Profitability", tabCustomers: "Customers", tabCashflow: "Expenses & cash", tabStatements: "Financial statements", tabAging: "AR / AP aging", tabCapacity: "Capacity",
     trendLabel: "PERFORMANCE TREND", trendTitle: "Monthly revenue", dreLabel: "MANAGEMENT P&L", dreTitle: "Simplified income statement", dreNote: "Service costs include products, shared materials, and allocated labor and fixed costs. Gross profit differs from the former cash result (revenue minus cash outflows); investing and financing remain in the cash analysis.", mixLabel: "SERVICE MIX", mixTitle: "Revenue concentration", comparisonLabel: "MONTHLY COMPARISON",
     comparisonTitle: "Revenue, COGS, and gross profit", insightsLabel: "MANAGEMENT INSIGHTS", insightsTitle: "What the selected period suggests", economicsLabel: "SERVICE ECONOMICS",
     economicsTitle: "Packages sold and contribution by service", revenue: "Revenue", sales: "Sales", hours: "Hours", contribution: "Gross profit", margin: "Gross margin", profitHour: "Profit / hour", packages: "Packages", packageMix: "Package mix", revenueMix: "Revenue mix", profitMix: "Gross profit mix",
@@ -20,12 +20,13 @@ const translations = {
     expensesKpi: "Cash outflows", operatingKpi: "Operating cash outflows", investingKpi: "Investing cash outflows", financingKpi: "Financing cash outflows", customersKpi: "Customers",
     repeatKpi: "Repeat customer rate", top10Kpi: "Top 10 revenue share", salesCustomerKpi: "Sales per customer", selected: "Selected", periodOne: "month", periods: "months", noData: "No data for the selected filters.", arOnTimeKpi: "AR paid on time (synthetic)", apOnTimeKpi: "AP paid on time (synthetic)", overdueOpen: "of open balance is past due", netResult: "Gross profit", serviceCosts: "COGS",
     actual: "Actual", list: "List", customersNote: "Customer metrics are shown by full year to protect privacy and avoid double counting across months.", chartPeriod: "Chart period", chartYtd: "Year to date (YTD)", chartSelected: "Selected period", chartYtdNote: "Monthly view through", chartSelectedNote: "Chart follows the dashboard period filter", selectedPeriod: "Selected period", ytd: "Year to date", productCosts: "Product costs", sharedMaterials: "Shared materials", laborFixed: "Labor and fixed-cost allocation", totalCogs: "Total COGS", grossProfit: "Gross profit", grossMargin: "Gross margin", packagesSold: "Packages sold", packageOne: "package",
+    exportTitle: "PDF reports", exportNote: "Exports use the selected period and open the browser's Save as PDF dialog.", exportStatements: "Download financial statements", exportShirley: "Download Shirley management report", statementsLabel: "THREE-STATEMENT VIEW", statementsTitle: "Financial statements", reconstructedTitle: "Reconstructed statements", reconstructedText: "The balance sheet and cash flow statement combine actual revenue and cash outflows with disclosed assumptions for opening cash, AR/AP timing, inventory, and depreciation.", balanceLabel: "BALANCE SHEET", balanceTitle: "Financial position", cfsLabel: "CASH FLOW STATEMENT", cfsTitle: "Direct-method cash flow", assumptionsLabel: "MODEL ASSUMPTIONS", assumptionsTitle: "Basis of preparation",
   },
   pt: {
     status: "Dados até set/2026", eyebrow: "DESEMPENHO FINANCEIRO • ESTUDO DE CASO", title: "Dashboard de uma empresa de massoterapia",
     subtitle: "Receita, rentabilidade, capital de giro, mix de serviços e capacidade em uma visão voltada à decisão.", modelLabel: "MODELO", modelValue: "Realizado + custos dos serviços rateados",
     modelNote: "Os vencimentos de AR/AP são sintéticos e estão separados dos registros financeiros reais.", year: "Ano", month: "Mês", service: "Serviço", reset: "Limpar filtros",
-    tabExecutive: "Executivo", tabProfitability: "Rentabilidade", tabCustomers: "Clientes", tabCashflow: "Gastos e caixa", tabAging: "Aging de AR / AP", tabCapacity: "Capacidade",
+    tabExecutive: "Executivo", tabProfitability: "Rentabilidade", tabCustomers: "Clientes", tabCashflow: "Gastos e caixa", tabStatements: "Demonstrativos", tabAging: "Aging de AR / AP", tabCapacity: "Capacidade",
     trendLabel: "TENDÊNCIA DE DESEMPENHO", trendTitle: "Receita mensal", dreLabel: "DRE GERENCIAL", dreTitle: "Demonstração de resultado simplificada", dreNote: "Os custos dos serviços incluem produtos, materiais compartilhados e o rateio de mão de obra e custos fixos. O lucro bruto difere do antigo resultado de caixa (receita menos gastos); investimentos e financiamentos permanecem na análise de caixa.", mixLabel: "MIX DE SERVIÇOS", mixTitle: "Concentração da receita", comparisonLabel: "COMPARAÇÃO MENSAL",
     comparisonTitle: "Receita, CSP e lucro bruto", insightsLabel: "INSIGHTS GERENCIAIS", insightsTitle: "O que o período selecionado indica", economicsLabel: "ECONOMIA DOS SERVIÇOS",
     economicsTitle: "Pacotes vendidos e contribuição por serviço", revenue: "Receita", sales: "Vendas", hours: "Horas", contribution: "Lucro bruto", margin: "Margem bruta", profitHour: "Lucro / hora", packages: "Pacotes", packageMix: "Mix de pacotes", revenueMix: "Mix de receita", profitMix: "Mix de lucro bruto",
@@ -42,6 +43,7 @@ const translations = {
     expensesKpi: "Saídas de caixa", operatingKpi: "Saídas operacionais", investingKpi: "Saídas de investimento", financingKpi: "Saídas de financiamento", customersKpi: "Clientes",
     repeatKpi: "Taxa de recompra", top10Kpi: "Participação dos 10 maiores", salesCustomerKpi: "Vendas por cliente", selected: "Selecionado", periodOne: "mês", periods: "meses", noData: "Não há dados para os filtros selecionados.", arOnTimeKpi: "AR pago em dia (sintético)", apOnTimeKpi: "AP pago em dia (sintético)", overdueOpen: "do saldo em aberto está vencido", netResult: "Lucro bruto", serviceCosts: "CSP",
     actual: "Realizado", list: "Tabela", customersNote: "Os indicadores de clientes são apresentados por ano completo para preservar a privacidade e evitar dupla contagem entre meses.", chartPeriod: "Período do gráfico", chartYtd: "Acumulado no ano (YTD)", chartSelected: "Período selecionado", chartYtdNote: "Visão mensal até", chartSelectedNote: "O gráfico acompanha o filtro de período do painel", selectedPeriod: "Período selecionado", ytd: "Acumulado no ano", productCosts: "Custos de produtos", sharedMaterials: "Materiais compartilhados", laborFixed: "Mão de obra e custos fixos rateados", totalCogs: "CSP total", grossProfit: "Lucro bruto", grossMargin: "Margem bruta", packagesSold: "Pacotes vendidos", packageOne: "pacote",
+    exportTitle: "Relatórios em PDF", exportNote: "A exportação usa o período selecionado e abre a opção Salvar como PDF do navegador.", exportStatements: "Baixar demonstrativos financeiros", exportShirley: "Baixar relatório gerencial da Shirley", statementsLabel: "VISÃO DOS TRÊS DEMONSTRATIVOS", statementsTitle: "Demonstrativos financeiros", reconstructedTitle: "Demonstrativos reconstruídos", reconstructedText: "O Balanço Patrimonial e a DFC combinam receitas e saídas reais com premissas divulgadas para caixa inicial, prazos de AR/AP, estoque e depreciação.", balanceLabel: "BALANÇO PATRIMONIAL", balanceTitle: "Posição financeira", cfsLabel: "DEMONSTRAÇÃO DO FLUXO DE CAIXA", cfsTitle: "Fluxo de caixa pelo método direto", assumptionsLabel: "PREMISSAS DO MODELO", assumptionsTitle: "Base de elaboração",
   },
 };
 
@@ -159,6 +161,90 @@ function dreReport(selected, ytd) {
   return `<table class="dre-table"><thead><tr><th></th><th>${t.selectedPeriod}</th><th>${t.ytd}</th></tr></thead><tbody>${amountRow(t.revenue,"revenue","revenue-row")}${amountRow(`(−) ${t.productCosts}`,"productCosts")}${amountRow(`(−) ${t.sharedMaterials}`,"sharedMaterials")}${amountRow(`(−) ${t.laborFixed}`,"laborFixed")}${amountRow(t.totalCogs,"cogs","subtotal-row")}${amountRow(t.grossProfit,"grossProfit","total-row")}<tr class="margin-row"><th>${t.grossMargin}</th><td>${fmtPercent(selected.grossMargin)}</td><td>${fmtPercent(ytd.grossMargin)}</td></tr><tr><th>${t.packagesSold}</th><td>${fmtNumber.format(selected.packages)}</td><td>${fmtNumber.format(ytd.packages)}</td></tr></tbody></table>`;
 }
 
+const statementModel = { openingCash: 5000, openingMonth: "2025-01", usefulLifeMonths: 60 };
+
+function fullBusinessMonth(row) {
+  const revenue = sum(row.services.map((service) => service.revenue));
+  const ar = sum(row.services.map((service) => service.ar_open));
+  const productUse = sum(row.services.map((service) => Number(service.sales || 0) * Number(data.service_model[service.service]?.product_cost || 0)));
+  return { month: row.month, revenue, ar, ap: Number(row.ap_open || 0), productUse, operating: Number(row.cash_flow?.Operacional || 0), investing: Number(row.cash_flow?.Investimento || 0), financing: Number(row.cash_flow?.Financiamento || 0) };
+}
+
+function financialModel() {
+  const source = data.monthly.filter((row) => row.month >= statementModel.openingMonth).map(fullBusinessMonth);
+  let cash = statementModel.openingCash;
+  let priorAR = 0;
+  return source.map((row) => {
+    const receipts = row.revenue + priorAR - row.ar;
+    const netCash = receipts - row.operating - row.investing - row.financing;
+    const openingCash = cash;
+    cash += netCash;
+    priorAR = row.ar;
+    return { ...row, receipts, netCash, openingCash, endingCash: cash };
+  });
+}
+
+function statementRange() {
+  const model = financialModel();
+  const eligible = selectedMonths().filter((row) => row.month >= statementModel.openingMonth).map((row) => row.month).sort();
+  const end = eligible.at(-1) || model.at(-1)?.month;
+  const start = eligible[0] || end;
+  const rows = model.filter((row) => row.month >= start && row.month <= end);
+  return { model, rows, start, end };
+}
+
+function statementTable(sections) {
+  return `<table class="statement-table"><tbody>${sections.map((section) => `${section.heading ? `<tr class="section-row"><th colspan="2">${section.heading}</th></tr>` : ""}${section.rows.map((row) => `<tr class="${row.className || ""}"><th>${row.label}</th><td>${fmtMoney.format(row.value)}</td></tr>`).join("")}`).join("")}</tbody></table>`;
+}
+
+function renderStatements() {
+  const { model, rows, start, end } = statementRange();
+  if (!rows.length) {
+    document.querySelector("#balance-sheet").innerHTML = `<p>${t.noData}</p>`;
+    document.querySelector("#cash-flow-statement").innerHTML = `<p>${t.noData}</p>`;
+    return;
+  }
+  const endRow = model.find((row) => row.month === end);
+  const endIndex = model.findIndex((row) => row.month === end);
+  const cumulative = model.slice(0, endIndex + 1);
+  const grossPpe = sum(cumulative.map((row) => row.investing));
+  const accumulatedDepreciation = cumulative.reduce((total, purchase, purchaseIndex) => total + (purchase.investing / statementModel.usefulLifeMonths) * (endIndex - purchaseIndex + 1), 0);
+  const netPpe = Math.max(0, grossPpe - accumulatedDepreciation);
+  const inventory = endRow.productUse;
+  const totalAssets = endRow.endingCash + endRow.ar + inventory + netPpe;
+  const totalLiabilities = endRow.ap;
+  const openingCapital = statementModel.openingCash;
+  const accumulatedResults = totalAssets - totalLiabilities - openingCapital;
+  const equity = openingCapital + accumulatedResults;
+  const balanceCheck = totalAssets - totalLiabilities - equity;
+  const cfs = { receipts: sum(rows.map((row) => row.receipts)), operating: sum(rows.map((row) => row.operating)), investing: sum(rows.map((row) => row.investing)), financing: sum(rows.map((row) => row.financing)), openingCash: rows[0].openingCash, endingCash: rows.at(-1).endingCash };
+  cfs.cfo = cfs.receipts - cfs.operating;
+  cfs.net = cfs.cfo - cfs.investing - cfs.financing;
+  const labels = lang === "pt" ? {
+    currentAssets:"Ativo circulante", cash:"Caixa e equivalentes", ar:"Contas a receber", inventory:"Estoque estimado", noncurrent:"Ativo não circulante", grossPpe:"Imobilizado bruto", depreciation:"(−) Depreciação acumulada", netPpe:"Imobilizado líquido", totalAssets:"Total do ativo", liabilities:"Passivo circulante", ap:"Contas a pagar", totalLiabilities:"Total do passivo", equity:"Patrimônio líquido", capital:"Capital inicial assumido", results:"Resultados e retiradas acumulados", totalEquity:"Total do patrimônio líquido", totalLE:"Passivo + patrimônio líquido", check:"Verificação do balanço",
+    operations:"Atividades operacionais", receipts:"Recebimentos de clientes", payments:"(−) Pagamentos operacionais", cfo:"Caixa líquido das operações", investing:"Atividades de investimento", capex:"(−) Aquisição de imobilizado", cfi:"Caixa líquido de investimentos", financing:"Atividades de financiamento", financePayments:"(−) Saídas de financiamento", cff:"Caixa líquido de financiamentos", net:"Variação líquida de caixa", opening:"Caixa no início do período", ending:"Caixa no fim do período"
+  } : {
+    currentAssets:"Current assets", cash:"Cash and cash equivalents", ar:"Accounts receivable", inventory:"Estimated inventory", noncurrent:"Non-current assets", grossPpe:"Gross property, plant & equipment", depreciation:"(−) Accumulated depreciation", netPpe:"Net property, plant & equipment", totalAssets:"Total assets", liabilities:"Current liabilities", ap:"Accounts payable", totalLiabilities:"Total liabilities", equity:"Equity", capital:"Assumed opening capital", results:"Accumulated results and owner withdrawals", totalEquity:"Total equity", totalLE:"Liabilities + equity", check:"Balance check",
+    operations:"Operating activities", receipts:"Cash receipts from customers", payments:"(−) Operating cash payments", cfo:"Net cash from operations", investing:"Investing activities", capex:"(−) Purchase of property, plant & equipment", cfi:"Net cash from investing", financing:"Financing activities", financePayments:"(−) Financing cash outflows", cff:"Net cash from financing", net:"Net change in cash", opening:"Cash at beginning of period", ending:"Cash at end of period"
+  };
+  document.querySelector("#statement-date").textContent = `${monthName(start)} — ${monthName(end)}`;
+  document.querySelector("#balance-sheet").innerHTML = statementTable([
+    { heading: labels.currentAssets, rows: [{label:labels.cash,value:endRow.endingCash},{label:labels.ar,value:endRow.ar},{label:labels.inventory,value:inventory}] },
+    { heading: labels.noncurrent, rows: [{label:labels.grossPpe,value:grossPpe},{label:labels.depreciation,value:-accumulatedDepreciation},{label:labels.netPpe,value:netPpe,className:"subtotal-row"},{label:labels.totalAssets,value:totalAssets,className:"total-row"}] },
+    { heading: labels.liabilities, rows: [{label:labels.ap,value:endRow.ap},{label:labels.totalLiabilities,value:totalLiabilities,className:"subtotal-row"}] },
+    { heading: labels.equity, rows: [{label:labels.capital,value:openingCapital},{label:labels.results,value:accumulatedResults},{label:labels.totalEquity,value:equity,className:"subtotal-row"},{label:labels.totalLE,value:totalLiabilities+equity,className:"total-row"},{label:labels.check,value:balanceCheck,className:"check-row"}] }
+  ]);
+  document.querySelector("#cash-flow-statement").innerHTML = statementTable([
+    { heading: labels.operations, rows: [{label:labels.receipts,value:cfs.receipts},{label:labels.payments,value:-cfs.operating},{label:labels.cfo,value:cfs.cfo,className:"subtotal-row"}] },
+    { heading: labels.investing, rows: [{label:labels.capex,value:-cfs.investing},{label:labels.cfi,value:-cfs.investing,className:"subtotal-row"}] },
+    { heading: labels.financing, rows: [{label:labels.financePayments,value:-cfs.financing},{label:labels.cff,value:-cfs.financing,className:"subtotal-row"}] },
+    { rows: [{label:labels.net,value:cfs.net,className:"total-row"},{label:labels.opening,value:cfs.openingCash},{label:labels.ending,value:cfs.endingCash,className:"total-row"}] }
+  ]);
+  document.querySelector("#statement-assumptions").innerHTML = lang === "pt"
+    ? `<li>Caixa inicial de ${fmtMoney.format(statementModel.openingCash)} em jan/2025, pois o saldo bancário inicial não foi fornecido.</li><li>Recebimentos de clientes = receita + AR inicial − AR final; os saldos de AR/AP e seus prazos são sintéticos.</li><li>Estoque estimado em um mês de consumo de produtos do mês de encerramento; será substituído por inventário físico.</li><li>Imobilizado depreciado linearmente em ${statementModel.usefulLifeMonths} meses a partir do mês da compra.</li><li>Resultados e retiradas acumulados são derivados para refletir lucros, pró-labore e retiradas sem histórico patrimonial completo. Não há ajuste oculto: a verificação do balanço deve ser zero.</li><li>Os demonstrativos usam o negócio completo e interpretam meses múltiplos como um intervalo contínuo entre o primeiro e o último mês selecionado.</li>`
+    : `<li>Opening cash of ${fmtMoney.format(statementModel.openingCash)} at Jan 2025 because an opening bank balance was not provided.</li><li>Customer receipts = revenue + opening AR − closing AR; AR/AP balances and timing are synthetic.</li><li>Inventory is estimated at one month of product consumption in the closing month and will be replaced by a physical count.</li><li>Property, plant and equipment is depreciated straight-line over ${statementModel.usefulLifeMonths} months from the purchase month.</li><li>Accumulated results and owner withdrawals are derived to reflect profit, owner compensation, and withdrawals without a complete opening balance sheet. There is no hidden plug: the balance check must equal zero.</li><li>Statements cover the full business and interpret multiple selected months as a continuous range from the first through the last selected month.</li>`;
+}
+
 function priorYearGrowth(current) {
   if (state.year === "all") return null;
   const previous = String(Number(state.year) - 1);
@@ -255,6 +341,7 @@ function render() {
   document.querySelector("#expense-groups").innerHTML = barList(agg.expenseGroups);
   document.querySelector("#cash-flow-chart").innerHTML = barList(agg.cashFlow);
   document.querySelector("#behavior-chart").innerHTML = barList(agg.behavior);
+  renderStatements();
 
   const overdueAR = Object.entries(agg.arAging).filter(([k])=>!["Liquidado","A vencer"].includes(k)).reduce((a,[,v])=>a+v,0);
   const overdueAP = Object.entries(agg.apAging).filter(([k])=>k!=="A vencer").reduce((a,[,v])=>a+v,0);
@@ -286,6 +373,17 @@ function updateMonthSummary(){const names=state.months.map((m)=>new Intl.DateTim
 monthOptions.addEventListener("change",()=>{state.months=[...monthOptions.querySelectorAll("input:checked")].map((input)=>input.value);updateMonthSummary();render();});
 serviceFilter.addEventListener("change",()=>{state.service=serviceFilter.value;render();});
 comparisonPeriod.addEventListener("change",()=>{state.comparisonPeriod=comparisonPeriod.value;render();});
+function exportPdf(mode) {
+  document.body.dataset.printMode = mode;
+  const previousView = state.view;
+  if (mode === "statements") document.querySelector('[data-view="statements"]').click();
+  else document.querySelector('[data-view="executive"]').click();
+  const cleanup = () => { delete document.body.dataset.printMode; document.querySelector(`[data-view="${previousView}"]`)?.click(); window.removeEventListener("afterprint", cleanup); };
+  window.addEventListener("afterprint", cleanup);
+  requestAnimationFrame(() => window.print());
+}
+document.querySelector("#export-statements").addEventListener("click",()=>exportPdf("statements"));
+document.querySelector("#export-shirley").addEventListener("click",()=>exportPdf("shirley"));
 document.querySelector("#reset-filters").addEventListener("click",()=>{state.year="2026";state.months=[];state.service="all";state.comparisonPeriod="ytd";yearFilter.value=state.year;serviceFilter.value=state.service;comparisonPeriod.value=state.comparisonPeriod;monthOptions.querySelectorAll("input").forEach((input)=>{input.checked=false;});updateMonthSummary();render();});
 
 fetch("dashboard-data.json?v=20261008-1")
