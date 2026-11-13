@@ -449,7 +449,7 @@ document.querySelector("#export-statements").addEventListener("click",()=>export
 document.querySelector("#export-shirley").addEventListener("click",()=>exportPdf("shirley"));
 document.querySelector("#reset-filters").addEventListener("click",()=>{state.year="2026";state.months=[];state.service="all";state.comparisonPeriod="ytd";yearFilter.value=state.year;serviceFilter.value=state.service;comparisonPeriod.value=state.comparisonPeriod;monthOptions.querySelectorAll("input").forEach((input)=>{input.checked=false;});updateMonthSummary();render();});
 
-fetch("dashboard-data.json?v=20261008-1")
+fetch(`dashboard-data.json?v=${Date.now()}`, { cache: "no-store" })
   .then((response)=>{if(!response.ok) throw new Error("Data unavailable"); return response.json();})
   .then((payload)=>{data=payload;populateFilters();render();})
   .catch(()=>{document.querySelector("main").innerHTML=`<p>${t.noData}</p>`;});
