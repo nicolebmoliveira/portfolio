@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="dashboard.css?v=20261009-5" />
+    <link rel="stylesheet" href="dashboard.css?v=20261113-1" />
   </head>
   <body>
     <header class="dashboard-header">
@@ -54,10 +54,10 @@
       </section>
 
       <nav class="dashboard-tabs" aria-label="Dashboard views">
-        <button class="active" data-view="executive" data-i18n="tabExecutive">Executive</button>
+        <button class="active" data-view="executive" data-i18n="tabExecutive">Cash overview</button>
         <button data-view="profitability" data-i18n="tabProfitability">Profitability</button>
+        <button data-view="expenses" data-i18n="tabExpenses">Expenses</button>
         <button data-view="customers" data-i18n="tabCustomers">Customers</button>
-        <button data-view="cashflow" data-i18n="tabCashflow">Expenses &amp; cash</button>
         <button data-view="statements" data-i18n="tabStatements">Financial statements</button>
         <button data-view="aging" data-i18n="tabAging">AR / AP aging</button>
         <button data-view="capacity" data-i18n="tabCapacity">Capacity</button>
@@ -66,40 +66,40 @@
       <section id="view-executive" class="dashboard-view active">
         <div id="executive-kpis" class="kpi-grid"></div>
         <div class="dashboard-grid wide-left">
-          <article class="panel"><div class="panel-heading"><div><p data-i18n="dreLabel">MANAGEMENT P&amp;L</p><h2 data-i18n="dreTitle">Simplified income statement</h2></div></div><div id="dre-report" class="dre-report"></div><p class="report-note" data-i18n="dreNote">Service costs include products, shared materials, and allocated labor and fixed costs. Gross profit differs from the former cash result; investments and financing remain in the cash analysis.</p></article>
+          <article class="panel"><div class="panel-heading comparison-heading"><div><p data-i18n="cashTrendLabel">CASH VIEW</p><h2 data-i18n="cashTrendTitle">Monthly sales, cash outflows, and cash surplus</h2></div><label class="chart-period-control"><span data-i18n="chartPeriod">Chart period</span><select id="comparison-period"><option value="ytd" data-i18n="chartYtd">Year to date (YTD)</option><option value="selected" data-i18n="chartSelected">Selected period</option></select></label></div><div id="comparison-period-note" class="chart-period-note"></div><div id="cash-averages" class="average-strip"></div><div id="cash-activity-chart" class="chart"></div></article>
           <article class="panel"><div class="panel-heading"><div><p data-i18n="mixLabel">SERVICE MIX</p><h2 data-i18n="mixTitle">Revenue concentration</h2></div></div><div id="service-mix" class="chart"></div></article>
         </div>
-        <div class="dashboard-grid equal">
-          <article class="panel"><div class="panel-heading comparison-heading"><div><p data-i18n="comparisonLabel">MONTHLY COMPARISON</p><h2 data-i18n="comparisonTitle">Revenue, COGS, and gross profit</h2></div><label class="chart-period-control"><span data-i18n="chartPeriod">Chart period</span><select id="comparison-period"><option value="ytd" data-i18n="chartYtd">Year to date (YTD)</option><option value="selected" data-i18n="chartSelected">Selected period</option></select></label></div><div id="comparison-period-note" class="chart-period-note"></div><div id="revenue-expense-chart" class="chart"></div></article>
-          <article class="panel insight-panel"><p data-i18n="insightsLabel">MANAGEMENT INSIGHTS</p><h2 data-i18n="insightsTitle">What the selected period suggests</h2><ul id="dynamic-insights"></ul></article>
-        </div>
+        <article class="panel insight-panel"><p data-i18n="cashInsightsLabel">CASH INSIGHTS</p><h2 data-i18n="cashInsightsTitle">What the selected period shows</h2><ul id="dynamic-insights"></ul></article>
       </section>
 
       <section id="view-statements" class="dashboard-view">
         <div class="statement-heading"><div><p data-i18n="statementsLabel">THREE-STATEMENT VIEW</p><h2 data-i18n="statementsTitle">Financial statements</h2></div><span id="statement-date"></span></div>
         <div class="synthetic-banner"><strong data-i18n="reconstructedTitle">Reconstructed statements</strong><span data-i18n="reconstructedText">The balance sheet and cash flow statement combine actual revenue and cash outflows with disclosed assumptions for opening cash, AR/AP timing, inventory, and depreciation.</span></div>
-        <div class="dashboard-grid equal statement-grid">
+        <div class="dashboard-grid three-statements statement-grid">
+          <article class="panel statement-panel"><div class="panel-heading"><div><p data-i18n="plLabel">PROFIT AND LOSS</p><h2 data-i18n="plTitle">Provisional income statement</h2></div></div><div id="profit-loss-statement"></div></article>
           <article class="panel statement-panel"><div class="panel-heading"><div><p data-i18n="balanceLabel">BALANCE SHEET</p><h2 data-i18n="balanceTitle">Financial position</h2></div></div><div id="balance-sheet"></div></article>
           <article class="panel statement-panel"><div class="panel-heading"><div><p data-i18n="cfsLabel">CASH FLOW STATEMENT</p><h2 data-i18n="cfsTitle">Direct-method cash flow</h2></div></div><div id="cash-flow-statement"></div></article>
         </div>
+        <article class="panel"><div class="panel-heading"><div><p data-i18n="monthlyActivityLabel">MONTHLY ACTIVITY</p><h2 data-i18n="monthlyActivityTitle">Sales, package volume, and cash outflows</h2></div></div><div id="statement-averages" class="average-strip"></div><div id="statement-activity-chart" class="chart"></div></article>
         <article class="panel assumptions-panel"><div class="panel-heading"><div><p data-i18n="assumptionsLabel">MODEL ASSUMPTIONS</p><h2 data-i18n="assumptionsTitle">Basis of preparation</h2></div></div><ul id="statement-assumptions"></ul></article>
       </section>
 
       <section id="view-profitability" class="dashboard-view">
         <div id="profitability-kpis" class="kpi-grid compact"></div>
+        <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p data-i18n="dreLabel">MANAGEMENT P&amp;L</p><h2 data-i18n="dreTitle">Managerial service profitability</h2></div></div><div id="dre-report" class="dre-report"></div><p class="report-note" data-i18n="dreNote">The managerial model includes product consumption, shared materials, owner compensation, and fixed-cost allocation. Unpaid owner compensation does not enter cash flow.</p></article><article class="panel"><div class="panel-heading"><div><p data-i18n="marginLabel">MARGIN PROFILE</p><h2 data-i18n="marginTitle">Gross margin by service</h2></div></div><div id="margin-chart" class="chart"></div></article></div>
         <article class="panel"><div class="panel-heading"><div><p data-i18n="economicsLabel">SERVICE ECONOMICS</p><h2 data-i18n="economicsTitle">Packages sold and contribution by service</h2></div></div><div class="table-wrap"><table><thead><tr><th data-i18n="service">Service</th><th data-i18n="packages">Packages</th><th data-i18n="packageMix">Package mix</th><th data-i18n="revenue">Revenue</th><th data-i18n="revenueMix">Revenue mix</th><th data-i18n="contribution">Gross profit</th><th data-i18n="profitMix">Gross profit mix</th><th data-i18n="margin">Gross margin</th></tr></thead><tbody id="service-table"></tbody></table></div></article>
-        <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p data-i18n="marginLabel">MARGIN PROFILE</p><h2 data-i18n="marginTitle">Contribution margin by service</h2></div></div><div id="margin-chart" class="chart"></div></article><article class="panel"><div class="panel-heading"><div><p data-i18n="pricingLabel">PRICING SIGNAL</p><h2 data-i18n="pricingTitle">Average realized price vs list price</h2></div></div><div id="pricing-chart" class="chart"></div></article></div>
+        <article class="panel"><div class="panel-heading"><div><p data-i18n="pricingLabel">PRICING SIGNAL</p><h2 data-i18n="pricingTitle">Average realized price vs list price</h2></div></div><div id="pricing-chart" class="chart"></div></article>
+      </section>
+
+      <section id="view-expenses" class="dashboard-view">
+        <div id="cash-kpis" class="kpi-grid compact"></div>
+        <article class="panel"><div class="panel-heading"><div><p data-i18n="expenseDetailLabel">EXPENSE REPORT</p><h2 data-i18n="expenseDetailTitle">Detailed spending for the selected period</h2></div></div><div class="table-wrap expense-table-wrap"><table><thead><tr><th data-i18n="date">Date</th><th data-i18n="description">Description</th><th data-i18n="expenseType">Expense type</th><th data-i18n="account">Account</th><th data-i18n="accountingGroup">Accounting group</th><th data-i18n="cashFlowClass">Cash flow</th><th data-i18n="amount">Amount</th></tr></thead><tbody id="expense-detail-table"></tbody><tfoot id="expense-detail-total"></tfoot></table></div></article>
+        <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p data-i18n="expenseLabel">EXPENSE STRUCTURE</p><h2 data-i18n="expenseTitle">Spending by accounting group</h2></div></div><div id="expense-groups" class="chart"></div></article><article class="panel"><div class="panel-heading"><div><p data-i18n="behaviorLabel">COST BEHAVIOR</p><h2 data-i18n="behaviorTitle">Fixed, variable, semivariable, and event-driven spending</h2></div></div><div id="behavior-chart" class="chart"></div></article></div>
       </section>
 
       <section id="view-customers" class="dashboard-view">
         <div id="customer-kpis" class="kpi-grid compact"></div>
         <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p data-i18n="retentionLabel">RETENTION</p><h2 data-i18n="retentionTitle">Repeat customer rate by year</h2></div></div><div id="retention-chart" class="chart"></div></article><article class="panel insight-panel"><p data-i18n="customerActionLabel">CUSTOMER ACTIONS</p><h2 data-i18n="customerActionTitle">How to turn retention into growth</h2><ul id="customer-actions"></ul></article></div>
-      </section>
-
-      <section id="view-cashflow" class="dashboard-view">
-        <div id="cash-kpis" class="kpi-grid compact"></div>
-        <div class="dashboard-grid equal"><article class="panel"><div class="panel-heading"><div><p data-i18n="expenseLabel">EXPENSE STRUCTURE</p><h2 data-i18n="expenseTitle">Spending by accounting group</h2></div></div><div id="expense-groups" class="chart"></div></article><article class="panel"><div class="panel-heading"><div><p data-i18n="cashLabel">CASH FLOW CLASSIFICATION</p><h2 data-i18n="cashTitle">Operating, investing, and financing</h2></div></div><div id="cash-flow-chart" class="chart"></div></article></div>
-        <article class="panel"><div class="panel-heading"><div><p data-i18n="behaviorLabel">COST BEHAVIOR</p><h2 data-i18n="behaviorTitle">Fixed, variable, semivariable, and event-driven spending</h2></div></div><div id="behavior-chart" class="chart"></div></article>
       </section>
 
       <section id="view-aging" class="dashboard-view">
@@ -116,6 +116,6 @@
     </main>
 
     <footer><p data-i18n="footer">Portfolio case study by Nicole Oliveira. Built from anonymized and aggregated operational data.</p><a id="footer-portfolio-link" href="index.html#projects" data-i18n="back">Back to portfolio</a></footer>
-    <script src="dashboard.js?v=20261009-5" defer></script>
+    <script src="dashboard.js?v=20261113-1" defer></script>
   </body>
 </html>

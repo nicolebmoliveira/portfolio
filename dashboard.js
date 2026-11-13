@@ -3,8 +3,8 @@ const translations = {
     status: "Data through Sep 2026", eyebrow: "FINANCIAL PERFORMANCE • CASE STUDY", title: "Massage therapy business dashboard",
     subtitle: "Revenue, profitability, working capital, service mix, and capacity in one decision-ready view.", modelLabel: "MODEL", modelValue: "Actuals + allocated service costs",
     modelNote: "AR/AP due dates are synthetic and clearly separated from actual financial records.", year: "Year", month: "Month", service: "Service", reset: "Reset filters",
-    tabExecutive: "Executive", tabProfitability: "Profitability", tabCustomers: "Customers", tabCashflow: "Expenses & cash", tabStatements: "Financial statements", tabAging: "AR / AP aging", tabCapacity: "Capacity",
-    trendLabel: "PERFORMANCE TREND", trendTitle: "Monthly revenue", dreLabel: "MANAGEMENT P&L", dreTitle: "Simplified income statement", dreNote: "Service costs include products, shared materials, and allocated labor and fixed costs. Gross profit differs from the former cash result (revenue minus cash outflows); investing and financing remain in the cash analysis.", mixLabel: "SERVICE MIX", mixTitle: "Revenue concentration", comparisonLabel: "MONTHLY COMPARISON",
+    tabExecutive: "Cash overview", tabProfitability: "Managerial profitability", tabExpenses: "Expenses", tabCustomers: "Customers", tabStatements: "Financial statements", tabAging: "AR / AP aging", tabCapacity: "Capacity",
+    trendLabel: "PERFORMANCE TREND", trendTitle: "Monthly revenue", dreLabel: "MANAGERIAL PROFITABILITY", dreTitle: "Managerial service profitability", dreNote: "The managerial model includes product consumption, shared materials, owner compensation, and fixed-cost allocation. Unpaid owner compensation does not enter cash flow.", mixLabel: "SERVICE MIX", mixTitle: "Revenue concentration", comparisonLabel: "MONTHLY COMPARISON",
     comparisonTitle: "Revenue, COGS, and gross profit", insightsLabel: "MANAGEMENT INSIGHTS", insightsTitle: "What the selected period suggests", economicsLabel: "SERVICE ECONOMICS",
     economicsTitle: "Packages sold and contribution by service", revenue: "Revenue", sales: "Sales", hours: "Hours", contribution: "Gross profit", margin: "Gross margin", profitHour: "Profit / hour", packages: "Packages", packageMix: "Package mix", revenueMix: "Revenue mix", profitMix: "Gross profit mix",
     marginLabel: "MARGIN PROFILE", marginTitle: "Gross margin by service", pricingLabel: "PRICING SIGNAL", pricingTitle: "Average realized price vs list price",
@@ -20,14 +20,16 @@ const translations = {
     expensesKpi: "Cash outflows", operatingKpi: "Operating cash outflows", investingKpi: "Investing cash outflows", financingKpi: "Financing cash outflows", customersKpi: "Customers",
     repeatKpi: "Repeat customer rate", top10Kpi: "Top 10 revenue share", salesCustomerKpi: "Sales per customer", selected: "Selected", periodOne: "month", periods: "months", noData: "No data for the selected filters.", arOnTimeKpi: "AR paid on time (synthetic)", apOnTimeKpi: "AP paid on time (synthetic)", overdueOpen: "of open balance is past due", netResult: "Gross profit", serviceCosts: "COGS",
     actual: "Actual", list: "List", customersNote: "Customer metrics are shown by full year to protect privacy and avoid double counting across months.", chartPeriod: "Chart period", chartYtd: "Year to date (YTD)", chartSelected: "Selected period", chartYtdNote: "Monthly view through", chartSelectedNote: "Chart follows the dashboard period filter", selectedPeriod: "Selected period", ytd: "Year to date", productCosts: "Product costs", sharedMaterials: "Shared materials", laborFixed: "Labor and fixed-cost allocation", totalCogs: "Total COGS", grossProfit: "Gross profit", grossMargin: "Gross margin", packagesSold: "Packages sold", packageOne: "package",
-    exportTitle: "PDF reports", exportNote: "Exports use the selected period and open the browser's Save as PDF dialog.", exportStatements: "Download financial statements", exportShirley: "Download Shirley management report", statementsLabel: "THREE-STATEMENT VIEW", statementsTitle: "Financial statements", reconstructedTitle: "Reconstructed statements", reconstructedText: "The balance sheet and cash flow statement combine actual revenue and cash outflows with disclosed assumptions for opening cash, AR/AP timing, inventory, and depreciation.", balanceLabel: "BALANCE SHEET", balanceTitle: "Financial position", cfsLabel: "CASH FLOW STATEMENT", cfsTitle: "Direct-method cash flow", assumptionsLabel: "MODEL ASSUMPTIONS", assumptionsTitle: "Basis of preparation",
+    exportTitle: "PDF reports", exportNote: "Exports use the selected period and open the browser's Save as PDF dialog.", exportStatements: "Download financial statements", exportShirley: "Download Shirley management report", statementsLabel: "THREE-STATEMENT VIEW", statementsTitle: "Financial statements", reconstructedTitle: "Reconstructed statements", reconstructedText: "The statements combine actual sales and cash outflows with disclosed assumptions until QuickBooks supplies complete accounting balances.", plLabel: "PROFIT AND LOSS", plTitle: "Provisional income statement", balanceLabel: "BALANCE SHEET", balanceTitle: "Financial position", cfsLabel: "CASH FLOW STATEMENT", cfsTitle: "Direct-method cash flow", assumptionsLabel: "MODEL ASSUMPTIONS", assumptionsTitle: "Basis of preparation", monthlyActivityLabel: "MONTHLY ACTIVITY", monthlyActivityTitle: "Sales, package volume, and cash outflows",
+    cashTrendLabel: "CASH VIEW", cashTrendTitle: "Monthly sales, cash outflows, and cash surplus", cashInsightsLabel: "CASH INSIGHTS", cashInsightsTitle: "What the selected period shows", cashSurplus: "Cash surplus", avgMonthlySales: "Average monthly sales", avgMonthlyExpenses: "Average monthly expenses", avgMonthlyPackages: "Average packages per month",
+    expenseDetailLabel: "EXPENSE REPORT", expenseDetailTitle: "Detailed spending for the selected period", date: "Date", description: "Description", expenseType: "Expense type", account: "Account", accountingGroup: "Accounting group", cashFlowClass: "Cash flow", amount: "Amount", total: "Total",
   },
   pt: {
     status: "Dados até set/2026", eyebrow: "DESEMPENHO FINANCEIRO • ESTUDO DE CASO", title: "Dashboard de uma empresa de massoterapia",
     subtitle: "Receita, rentabilidade, capital de giro, mix de serviços e capacidade em uma visão voltada à decisão.", modelLabel: "MODELO", modelValue: "Realizado + custos dos serviços rateados",
     modelNote: "Os vencimentos de AR/AP são sintéticos e estão separados dos registros financeiros reais.", year: "Ano", month: "Mês", service: "Serviço", reset: "Limpar filtros",
-    tabExecutive: "Executivo", tabProfitability: "Rentabilidade", tabCustomers: "Clientes", tabCashflow: "Gastos e caixa", tabStatements: "Demonstrativos", tabAging: "Aging de AR / AP", tabCapacity: "Capacidade",
-    trendLabel: "TENDÊNCIA DE DESEMPENHO", trendTitle: "Receita mensal", dreLabel: "DRE GERENCIAL", dreTitle: "Demonstração de resultado simplificada", dreNote: "Os custos dos serviços incluem produtos, materiais compartilhados e o rateio de mão de obra e custos fixos. O lucro bruto difere do antigo resultado de caixa (receita menos gastos); investimentos e financiamentos permanecem na análise de caixa.", mixLabel: "MIX DE SERVIÇOS", mixTitle: "Concentração da receita", comparisonLabel: "COMPARAÇÃO MENSAL",
+    tabExecutive: "Visão de caixa", tabProfitability: "Rentabilidade gerencial", tabExpenses: "Gastos", tabCustomers: "Clientes", tabStatements: "Demonstrativos", tabAging: "Aging de AR / AP", tabCapacity: "Capacidade",
+    trendLabel: "TENDÊNCIA DE DESEMPENHO", trendTitle: "Receita mensal", dreLabel: "RENTABILIDADE GERENCIAL", dreTitle: "Rentabilidade gerencial dos serviços", dreNote: "O modelo gerencial inclui consumo de produtos, materiais compartilhados, pró-labore econômico e rateio de custos fixos. O pró-labore não pago não entra no fluxo de caixa.", mixLabel: "MIX DE SERVIÇOS", mixTitle: "Concentração da receita", comparisonLabel: "COMPARAÇÃO MENSAL",
     comparisonTitle: "Receita, CSP e lucro bruto", insightsLabel: "INSIGHTS GERENCIAIS", insightsTitle: "O que o período selecionado indica", economicsLabel: "ECONOMIA DOS SERVIÇOS",
     economicsTitle: "Pacotes vendidos e contribuição por serviço", revenue: "Receita", sales: "Vendas", hours: "Horas", contribution: "Lucro bruto", margin: "Margem bruta", profitHour: "Lucro / hora", packages: "Pacotes", packageMix: "Mix de pacotes", revenueMix: "Mix de receita", profitMix: "Mix de lucro bruto",
     marginLabel: "PERFIL DE MARGEM", marginTitle: "Margem bruta por serviço", pricingLabel: "SINAL DE PREÇO", pricingTitle: "Preço médio realizado versus preço de tabela",
@@ -43,7 +45,9 @@ const translations = {
     expensesKpi: "Saídas de caixa", operatingKpi: "Saídas operacionais", investingKpi: "Saídas de investimento", financingKpi: "Saídas de financiamento", customersKpi: "Clientes",
     repeatKpi: "Taxa de recompra", top10Kpi: "Participação dos 10 maiores", salesCustomerKpi: "Vendas por cliente", selected: "Selecionado", periodOne: "mês", periods: "meses", noData: "Não há dados para os filtros selecionados.", arOnTimeKpi: "AR pago em dia (sintético)", apOnTimeKpi: "AP pago em dia (sintético)", overdueOpen: "do saldo em aberto está vencido", netResult: "Lucro bruto", serviceCosts: "CSP",
     actual: "Realizado", list: "Tabela", customersNote: "Os indicadores de clientes são apresentados por ano completo para preservar a privacidade e evitar dupla contagem entre meses.", chartPeriod: "Período do gráfico", chartYtd: "Acumulado no ano (YTD)", chartSelected: "Período selecionado", chartYtdNote: "Visão mensal até", chartSelectedNote: "O gráfico acompanha o filtro de período do painel", selectedPeriod: "Período selecionado", ytd: "Acumulado no ano", productCosts: "Custos de produtos", sharedMaterials: "Materiais compartilhados", laborFixed: "Mão de obra e custos fixos rateados", totalCogs: "CSP total", grossProfit: "Lucro bruto", grossMargin: "Margem bruta", packagesSold: "Pacotes vendidos", packageOne: "pacote",
-    exportTitle: "Relatórios em PDF", exportNote: "A exportação usa o período selecionado e abre a opção Salvar como PDF do navegador.", exportStatements: "Baixar demonstrativos financeiros", exportShirley: "Baixar relatório gerencial da Shirley", statementsLabel: "VISÃO DOS TRÊS DEMONSTRATIVOS", statementsTitle: "Demonstrativos financeiros", reconstructedTitle: "Demonstrativos reconstruídos", reconstructedText: "O Balanço Patrimonial e a DFC combinam receitas e saídas reais com premissas divulgadas para caixa inicial, prazos de AR/AP, estoque e depreciação.", balanceLabel: "BALANÇO PATRIMONIAL", balanceTitle: "Posição financeira", cfsLabel: "DEMONSTRAÇÃO DO FLUXO DE CAIXA", cfsTitle: "Fluxo de caixa pelo método direto", assumptionsLabel: "PREMISSAS DO MODELO", assumptionsTitle: "Base de elaboração",
+    exportTitle: "Relatórios em PDF", exportNote: "A exportação usa o período selecionado e abre a opção Salvar como PDF do navegador.", exportStatements: "Baixar demonstrativos financeiros", exportShirley: "Baixar relatório gerencial da Shirley", statementsLabel: "VISÃO DOS TRÊS DEMONSTRATIVOS", statementsTitle: "Demonstrativos financeiros", reconstructedTitle: "Demonstrativos reconstruídos", reconstructedText: "Os demonstrativos combinam vendas e saídas reais com premissas divulgadas até que o QuickBooks forneça saldos contábeis completos.", plLabel: "DRE / PROFIT AND LOSS", plTitle: "Demonstração de resultado provisória", balanceLabel: "BALANÇO PATRIMONIAL", balanceTitle: "Posição financeira", cfsLabel: "DEMONSTRAÇÃO DO FLUXO DE CAIXA", cfsTitle: "Fluxo de caixa pelo método direto", assumptionsLabel: "PREMISSAS DO MODELO", assumptionsTitle: "Base de elaboração", monthlyActivityLabel: "ATIVIDADE MENSAL", monthlyActivityTitle: "Vendas, pacotes e saídas de caixa",
+    cashTrendLabel: "VISÃO DE CAIXA", cashTrendTitle: "Vendas, saídas e superávit de caixa mensal", cashInsightsLabel: "LEITURA DO CAIXA", cashInsightsTitle: "O que o período selecionado mostra", cashSurplus: "Superávit de caixa", avgMonthlySales: "Média mensal de vendas", avgMonthlyExpenses: "Média mensal de gastos", avgMonthlyPackages: "Média de pacotes por mês",
+    expenseDetailLabel: "RELATÓRIO DE GASTOS", expenseDetailTitle: "Gastos detalhados do período selecionado", date: "Data", description: "Descrição", expenseType: "Tipo de gasto", account: "Conta", accountingGroup: "Grupo contábil", cashFlowClass: "Fluxo de caixa", amount: "Valor", total: "Total",
   },
 };
 
@@ -57,7 +61,7 @@ document.querySelectorAll("[data-language]").forEach((el) => el.classList.toggle
 document.querySelector("#portfolio-link").href = lang === "pt" ? "pt.html#projects" : "index.html#projects";
 document.querySelector("#footer-portfolio-link").href = lang === "pt" ? "pt.html#projects" : "index.html#projects";
 
-const fmtMoney = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
+const fmtMoney = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", { style: "currency", currency: "BRL", minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const fmtNumber = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", { maximumFractionDigits: 1 });
 const fmtPercent = (n) => `${fmtNumber.format((Number(n) || 0) * 100)}%`;
 const colors = ["#4ca783", "#e87b61", "#d7b84b", "#6f9fc5", "#8d77b5", "#7e9b8f", "#c6905a", "#4d7d75", "#bd6f84"];
@@ -117,10 +121,10 @@ function yearToDateRows(rows) {
 
 function aggregateRows(rows = selectedMonths()) {
   const serviceMap = {};
-  const result = { revenue: 0, sales: 0, sessions: 0, hours: 0, modeledCost: 0, arOpen: 0, expenses: 0, apOpen: 0, expenseGroups: {}, behavior: {}, cashFlow: {}, arAging: {}, apAging: {}, services: serviceMap };
+  const result = { revenue: 0, sales: 0, sessions: 0, hours: 0, modeledCost: 0, arOpen: 0, expenses: 0, apOpen: 0, expenseGroups: {}, behavior: {}, cashFlow: {}, arAging: {}, apAging: {}, expenseTransactions: [], services: serviceMap };
   rows.forEach((row) => {
     result.expenses += Number(row.expenses || 0); result.apOpen += Number(row.ap_open || 0);
-    addMaps(result.expenseGroups, row.expense_groups); addMaps(result.behavior, row.expense_behavior); addMaps(result.cashFlow, row.cash_flow); addMaps(result.apAging, row.ap_aging);
+    addMaps(result.expenseGroups, row.expense_groups); addMaps(result.behavior, row.expense_behavior); addMaps(result.cashFlow, row.cash_flow); addMaps(result.apAging, row.ap_aging); result.expenseTransactions.push(...(row.expense_transactions || []));
     row.services.filter((s) => state.service === "all" || s.service === state.service).forEach((s) => {
       const target = serviceMap[s.service] ||= { service: s.service, revenue: 0, sales: 0, sessions: 0, hours: 0, modeledCost: 0, arOpen: 0, arAging: {} };
       target.revenue += Number(s.revenue); target.sales += Number(s.sales); target.sessions += Number(s.sessions); target.hours += Number(s.hours); target.modeledCost += Number(s.modeled_cost); target.arOpen += Number(s.ar_open); addMaps(target.arAging, s.ar_aging);
@@ -186,7 +190,9 @@ function financialModel() {
 
 function statementRange() {
   const model = financialModel();
-  const eligible = selectedMonths().filter((row) => row.month >= statementModel.openingMonth).map((row) => row.month).sort();
+  const selected = selectedMonths();
+  const eligible = selected.filter((row) => row.month >= statementModel.openingMonth).map((row) => row.month).sort();
+  if (selected.length && !eligible.length) return { model, rows: [], start: null, end: null };
   const end = eligible.at(-1) || model.at(-1)?.month;
   const start = eligible[0] || end;
   const rows = model.filter((row) => row.month >= start && row.month <= end);
@@ -197,9 +203,23 @@ function statementTable(sections) {
   return `<table class="statement-table"><tbody>${sections.map((section) => `${section.heading ? `<tr class="section-row"><th colspan="2">${section.heading}</th></tr>` : ""}${section.rows.map((row) => `<tr class="${row.className || ""}"><th>${row.label}</th><td>${fmtMoney.format(row.value)}</td></tr>`).join("")}`).join("")}</tbody></table>`;
 }
 
+function accountingProfitLoss(start, end) {
+  const rows = data.monthly.filter((row) => row.month >= start && row.month <= end);
+  const revenue = sum(rows.flatMap((row) => row.services).map((service) => service.revenue));
+  const groups = {};
+  rows.forEach((row) => addMaps(groups, row.expense_groups));
+  const serviceCosts = Number(groups["Custos dos serviços"] || 0) + Number(groups["Custos dos produtos"] || 0);
+  const excluded = new Set(["Custos dos serviços", "Custos dos produtos", "Ativo imobilizado", "Obrigações tributárias"]);
+  const operatingExpenses = Object.entries(groups).filter(([group]) => !excluded.has(group)).reduce((total, [, value]) => total + Number(value || 0), 0);
+  const grossProfit = revenue - serviceCosts;
+  const netIncome = grossProfit - operatingExpenses;
+  return { revenue, serviceCosts, grossProfit, grossMargin: revenue ? grossProfit / revenue : 0, operatingExpenses, netIncome, netMargin: revenue ? netIncome / revenue : 0 };
+}
+
 function renderStatements() {
   const { model, rows, start, end } = statementRange();
   if (!rows.length) {
+    document.querySelector("#profit-loss-statement").innerHTML = `<p>${t.noData}</p>`;
     document.querySelector("#balance-sheet").innerHTML = `<p>${t.noData}</p>`;
     document.querySelector("#cash-flow-statement").innerHTML = `<p>${t.noData}</p>`;
     return;
@@ -220,14 +240,19 @@ function renderStatements() {
   const cfs = { receipts: sum(rows.map((row) => row.receipts)), operating: sum(rows.map((row) => row.operating)), investing: sum(rows.map((row) => row.investing)), financing: sum(rows.map((row) => row.financing)), openingCash: rows[0].openingCash, endingCash: rows.at(-1).endingCash };
   cfs.cfo = cfs.receipts - cfs.operating;
   cfs.net = cfs.cfo - cfs.investing - cfs.financing;
+  const profitLoss = accountingProfitLoss(start, end);
   const labels = lang === "pt" ? {
     currentAssets:"Ativo circulante", cash:"Caixa e equivalentes", ar:"Contas a receber", inventory:"Estoque estimado", noncurrent:"Ativo não circulante", grossPpe:"Imobilizado bruto", depreciation:"(−) Depreciação acumulada", netPpe:"Imobilizado líquido", totalAssets:"Total do ativo", liabilities:"Passivo circulante", ap:"Contas a pagar", totalLiabilities:"Total do passivo", equity:"Patrimônio líquido", capital:"Capital inicial assumido", results:"Resultados e retiradas acumulados", totalEquity:"Total do patrimônio líquido", totalLE:"Passivo + patrimônio líquido", check:"Verificação do balanço",
-    operations:"Atividades operacionais", receipts:"Recebimentos de clientes", payments:"(−) Pagamentos operacionais", cfo:"Caixa líquido das operações", investing:"Atividades de investimento", capex:"(−) Aquisição de imobilizado", cfi:"Caixa líquido de investimentos", financing:"Atividades de financiamento", financePayments:"(−) Saídas de financiamento", cff:"Caixa líquido de financiamentos", net:"Variação líquida de caixa", opening:"Caixa no início do período", ending:"Caixa no fim do período"
+    operations:"Atividades operacionais", receipts:"Recebimentos de clientes", payments:"(−) Pagamentos operacionais", cfo:"Caixa líquido das operações", investing:"Atividades de investimento", capex:"(−) Aquisição de imobilizado", cfi:"Caixa líquido de investimentos", financing:"Atividades de financiamento", financePayments:"(−) Saídas de financiamento", cff:"Caixa líquido de financiamentos", net:"Variação líquida de caixa", opening:"Caixa no início do período", ending:"Caixa no fim do período", revenue:"Receita de serviços", actualCogs:"(−) Custos dos serviços registrados", gp:"Lucro bruto provisório", gm:"Margem bruta provisória", opex:"(−) Despesas operacionais e tributos", netIncome:"Resultado líquido provisório", netMargin:"Margem líquida provisória"
   } : {
     currentAssets:"Current assets", cash:"Cash and cash equivalents", ar:"Accounts receivable", inventory:"Estimated inventory", noncurrent:"Non-current assets", grossPpe:"Gross property, plant & equipment", depreciation:"(−) Accumulated depreciation", netPpe:"Net property, plant & equipment", totalAssets:"Total assets", liabilities:"Current liabilities", ap:"Accounts payable", totalLiabilities:"Total liabilities", equity:"Equity", capital:"Assumed opening capital", results:"Accumulated results and owner withdrawals", totalEquity:"Total equity", totalLE:"Liabilities + equity", check:"Balance check",
-    operations:"Operating activities", receipts:"Cash receipts from customers", payments:"(−) Operating cash payments", cfo:"Net cash from operations", investing:"Investing activities", capex:"(−) Purchase of property, plant & equipment", cfi:"Net cash from investing", financing:"Financing activities", financePayments:"(−) Financing cash outflows", cff:"Net cash from financing", net:"Net change in cash", opening:"Cash at beginning of period", ending:"Cash at end of period"
+    operations:"Operating activities", receipts:"Cash receipts from customers", payments:"(−) Operating cash payments", cfo:"Net cash from operations", investing:"Investing activities", capex:"(−) Purchase of property, plant & equipment", cfi:"Net cash from investing", financing:"Financing activities", financePayments:"(−) Financing cash outflows", cff:"Net cash from financing", net:"Net change in cash", opening:"Cash at beginning of period", ending:"Cash at end of period", revenue:"Service revenue", actualCogs:"(−) Recorded service costs", gp:"Provisional gross profit", gm:"Provisional gross margin", opex:"(−) Operating expenses and taxes", netIncome:"Provisional net income", netMargin:"Provisional net margin"
   };
   document.querySelector("#statement-date").textContent = `${monthName(start)} — ${monthName(end)}`;
+  document.querySelector("#profit-loss-statement").innerHTML = statementTable([
+    { rows: [{label:labels.revenue,value:profitLoss.revenue},{label:labels.actualCogs,value:-profitLoss.serviceCosts},{label:labels.gp,value:profitLoss.grossProfit,className:"subtotal-row"}] },
+    { rows: [{label:labels.opex,value:-profitLoss.operatingExpenses},{label:labels.netIncome,value:profitLoss.netIncome,className:"total-row"}] }
+  ]) + `<div class="statement-ratios"><span>${labels.gm}: <strong>${fmtPercent(profitLoss.grossMargin)}</strong></span><span>${labels.netMargin}: <strong>${fmtPercent(profitLoss.netMargin)}</strong></span></div>`;
   document.querySelector("#balance-sheet").innerHTML = statementTable([
     { heading: labels.currentAssets, rows: [{label:labels.cash,value:endRow.endingCash},{label:labels.ar,value:endRow.ar},{label:labels.inventory,value:inventory}] },
     { heading: labels.noncurrent, rows: [{label:labels.grossPpe,value:grossPpe},{label:labels.depreciation,value:-accumulatedDepreciation},{label:labels.netPpe,value:netPpe,className:"subtotal-row"},{label:labels.totalAssets,value:totalAssets,className:"total-row"}] },
@@ -241,8 +266,8 @@ function renderStatements() {
     { rows: [{label:labels.net,value:cfs.net,className:"total-row"},{label:labels.opening,value:cfs.openingCash},{label:labels.ending,value:cfs.endingCash,className:"total-row"}] }
   ]);
   document.querySelector("#statement-assumptions").innerHTML = lang === "pt"
-    ? `<li>Caixa inicial de ${fmtMoney.format(statementModel.openingCash)} em jan/2025, pois o saldo bancário inicial não foi fornecido.</li><li>Recebimentos de clientes = receita + AR inicial − AR final; os saldos de AR/AP e seus prazos são sintéticos.</li><li>Estoque estimado em um mês de consumo de produtos do mês de encerramento; será substituído por inventário físico.</li><li>Imobilizado depreciado linearmente em ${statementModel.usefulLifeMonths} meses a partir do mês da compra.</li><li>Resultados e retiradas acumulados são derivados para refletir lucros, pró-labore e retiradas sem histórico patrimonial completo. Não há ajuste oculto: a verificação do balanço deve ser zero.</li><li>Os demonstrativos usam o negócio completo e interpretam meses múltiplos como um intervalo contínuo entre o primeiro e o último mês selecionado.</li>`
-    : `<li>Opening cash of ${fmtMoney.format(statementModel.openingCash)} at Jan 2025 because an opening bank balance was not provided.</li><li>Customer receipts = revenue + opening AR − closing AR; AR/AP balances and timing are synthetic.</li><li>Inventory is estimated at one month of product consumption in the closing month and will be replaced by a physical count.</li><li>Property, plant and equipment is depreciated straight-line over ${statementModel.usefulLifeMonths} months from the purchase month.</li><li>Accumulated results and owner withdrawals are derived to reflect profit, owner compensation, and withdrawals without a complete opening balance sheet. There is no hidden plug: the balance check must equal zero.</li><li>Statements cover the full business and interpret multiple selected months as a continuous range from the first through the last selected month.</li>`;
+    ? `<li>Caixa inicial de ${fmtMoney.format(statementModel.openingCash)} em jan/2025, pois o saldo bancário inicial não foi fornecido.</li><li>Recebimentos de clientes = receita + AR inicial − AR final; os saldos de AR/AP e seus prazos são sintéticos.</li><li>A DRE provisória usa apenas gastos registrados. O pró-labore econômico permanece na rentabilidade gerencial e não entra no fluxo de caixa enquanto não for efetivamente pago.</li><li>Estoque estimado em um mês de consumo de produtos do mês de encerramento; será substituído por inventário físico.</li><li>Imobilizado depreciado linearmente em ${statementModel.usefulLifeMonths} meses a partir do mês da compra.</li><li>Os demonstrativos serão substituídos pelos saldos contábeis do QuickBooks conforme a escrituração avançar.</li>`
+    : `<li>Opening cash of ${fmtMoney.format(statementModel.openingCash)} at Jan 2025 because an opening bank balance was not provided.</li><li>Customer receipts = revenue + opening AR − closing AR; AR/AP balances and timing are synthetic.</li><li>The provisional P&L uses recorded spending only. Modeled owner compensation remains in managerial profitability and does not enter cash flow until paid.</li><li>Inventory is estimated at one month of product consumption in the closing month and will be replaced by a physical count.</li><li>Property, plant and equipment is depreciated straight-line over ${statementModel.usefulLifeMonths} months from the purchase month.</li><li>QuickBooks accounting balances will replace reconstructed amounts as bookkeeping progresses.</li>`;
 }
 
 function priorYearGrowth(current) {
@@ -295,6 +320,37 @@ function comparisonChart(rows) {
   return `<div class="combo-legend"><span class="revenue">${t.revenue}</span><span class="expenses">${t.serviceCosts}</span><span class="result">${t.netResult}</span></div><svg class="combo-svg" viewBox="0 0 ${width} ${height}" role="img"><line class="zero" x1="${padX}" x2="${width-padX}" y1="${zero}" y2="${zero}"/><polygon class="result-area" points="${area}"/><polyline class="revenue-line" points="${points("revenue")}"/><polyline class="expense-line" points="${points("expenses")}"/>${pairs.map((p,i)=>`<circle class="revenue-point" cx="${x(i)}" cy="${y(p.revenue)}" r="4"><title>${monthName(p.month)} · ${t.revenue}: ${fmtMoney.format(p.revenue)}</title></circle><circle class="expense-point" cx="${x(i)}" cy="${y(p.expenses)}" r="4"><title>${monthName(p.month)} · ${t.serviceCosts}: ${fmtMoney.format(p.expenses)} · ${t.netResult}: ${fmtMoney.format(p.result)}</title></circle><text class="value-label revenue-value" x="${x(i)}" y="${y(p.revenue)-10}" text-anchor="middle">${valueLabel(p.revenue)}</text><text class="value-label expense-value" x="${x(i)}" y="${y(p.expenses)+16}" text-anchor="middle">${valueLabel(p.expenses)}</text><text class="value-label result-value" x="${x(i)}" y="${y(p.result)-8}" text-anchor="middle">${valueLabel(p.result)}</text><text class="month-label" x="${x(i)}" y="${height-7}" text-anchor="middle">${monthName(p.month).split(" ")[0]}</text>`).join("")}</svg>`;
 }
 
+function cashActivityMetrics(rows) {
+  return rows.map((row) => {
+    const revenue = sum(row.services.map((service) => service.revenue));
+    const packages = sum(row.services.map((service) => service.sales));
+    const expenses = Number(row.expenses || 0);
+    return { month: row.month, revenue, expenses, surplus: revenue - expenses, packages };
+  });
+}
+
+function averageStrip(rows) {
+  const metrics = cashActivityMetrics(rows);
+  const count = metrics.length || 1;
+  return `<div><span>${t.avgMonthlySales}</span><strong>${fmtMoney.format(sum(metrics.map((item)=>item.revenue))/count)}</strong></div><div><span>${t.avgMonthlyExpenses}</span><strong>${fmtMoney.format(sum(metrics.map((item)=>item.expenses))/count)}</strong></div><div><span>${t.avgMonthlyPackages}</span><strong>${fmtNumber.format(sum(metrics.map((item)=>item.packages))/count)}</strong></div>`;
+}
+
+function cashActivityChart(rows) {
+  const pairs = cashActivityMetrics(rows);
+  if (!pairs.length) return `<p>${t.noData}</p>`;
+  const width=820,height=350,padX=58,padTop=42,padBottom=62;
+  const values=pairs.flatMap((item)=>[item.revenue,item.expenses,item.surplus,0]);
+  const min=Math.min(...values),max=Math.max(...values,1),range=max-min||1;
+  const x=(index)=>padX+index*((width-padX*2)/Math.max(pairs.length-1,1));
+  const y=(value)=>height-padBottom-(value-min)/range*(height-padTop-padBottom);
+  const zero=y(0);
+  const points=(key)=>pairs.map((item,index)=>`${x(index)},${y(item[key])}`).join(" ");
+  const area=`${x(0)},${zero} ${points("surplus")} ${x(pairs.length-1)},${zero}`;
+  const maxPackages=Math.max(...pairs.map((item)=>item.packages),1);
+  const valueLabel=(value)=>fmtMoney.format(value).replace(/\s/g," ");
+  return `<div class="combo-legend"><span class="revenue">${t.revenue}</span><span class="expenses">${t.expensesKpi}</span><span class="result">${t.cashSurplus}</span><span class="packages-legend">${t.packages}</span></div><svg class="combo-svg cash-combo-svg" viewBox="0 0 ${width} ${height}" role="img"><line class="zero" x1="${padX}" x2="${width-padX}" y1="${zero}" y2="${zero}"/><polygon class="result-area" points="${area}"/><polyline class="revenue-line" points="${points("revenue")}"/><polyline class="expense-line" points="${points("expenses")}"/>${pairs.map((item,index)=>{const px=x(index);const barHeight=item.packages/maxPackages*42;return `<rect class="package-bar" x="${px-7}" y="${height-padBottom-barHeight}" width="14" height="${barHeight}" rx="3"><title>${monthName(item.month)} · ${t.packages}: ${item.packages}</title></rect><circle class="revenue-point" cx="${px}" cy="${y(item.revenue)}" r="4"/><circle class="expense-point" cx="${px}" cy="${y(item.expenses)}" r="4"/><text class="value-label revenue-value" x="${px}" y="${y(item.revenue)-10}" text-anchor="middle">${valueLabel(item.revenue)}</text><text class="value-label expense-value" x="${px}" y="${y(item.expenses)+16}" text-anchor="middle">${valueLabel(item.expenses)}</text><text class="package-value" x="${px}" y="${height-padBottom-barHeight-5}" text-anchor="middle">${fmtNumber.format(item.packages)}</text><text class="month-label" x="${px}" y="${height-8}" text-anchor="middle">${monthName(item.month).split(" ")[0]}</text>`}).join("")}</svg>`;
+}
+
 function capacityChart(rows) {
   if (!rows.length) return `<p>${t.noData}</p>`;
   return `<div class="capacity-list">${rows.map((row)=>{const hours=row.services.filter((s)=>state.service==="all"||s.service===state.service).reduce((a,s)=>a+Number(s.hours),0);const rate=hours/data.meta.capacity_hours;const practical=rate/data.meta.billable_capacity_rate;return `<div class="capacity-row ${practical>=1?"high":""}"><span>${monthName(row.month)}</span><div class="capacity-track"><i style="width:${Math.min(rate*100,100)}%"></i></div><b>${fmtPercent(rate)} / ${fmtPercent(practical)}</b></div>`}).join("")}</div>`;
@@ -307,22 +363,26 @@ function render() {
   const agg = aggregateRows(rows);
   const growth = priorYearGrowth(agg);
   document.querySelector("#filter-summary").textContent = `${t.selected}: ${rows.length} ${rows.length === 1 ? t.periodOne : t.periods} · ${fmtMoney.format(agg.revenue)} · ${fmtNumber.format(agg.sales)} ${t.packages.toLowerCase()}`;
+  const cashSurplus = agg.revenue - agg.expenses;
   document.querySelector("#executive-kpis").innerHTML = [
     kpi(t.revenueKpi, fmtMoney.format(agg.revenue), growth === null ? "" : `${growth >= 0 ? "↑" : "↓"} ${fmtPercent(Math.abs(growth))}`, growth < 0),
-    kpi(t.contributionKpi, fmtMoney.format(agg.contribution), fmtPercent(agg.margin)),
+    kpi(t.expensesKpi, fmtMoney.format(agg.expenses), ""),
+    kpi(t.cashSurplus, fmtMoney.format(cashSurplus), fmtPercent(agg.revenue ? cashSurplus / agg.revenue : 0), cashSurplus < 0),
     kpi(t.packagesSold, fmtNumber.format(agg.sales), ""),
-    kpi(t.practicalKpi, fmtPercent(agg.practicalOccupancy), `${t.occupancyKpi}: ${fmtPercent(agg.occupancy)}`, agg.practicalOccupancy > 1),
   ].join("");
   document.querySelector("#dre-report").innerHTML = dreReport(dreMetrics(rows), dreMetrics(ytdData));
   document.querySelector("#service-mix").innerHTML = donut(agg.services);
-  document.querySelector("#revenue-expense-chart").innerHTML = comparisonChart(comparisonData);
+  document.querySelector("#cash-activity-chart").innerHTML = cashActivityChart(comparisonData);
+  document.querySelector("#cash-averages").innerHTML = averageStrip(comparisonData);
+  document.querySelector("#statement-activity-chart").innerHTML = cashActivityChart(comparisonData);
+  document.querySelector("#statement-averages").innerHTML = averageStrip(comparisonData);
   const comparisonEnd = comparisonData.at(-1);
   document.querySelector("#comparison-period-note").textContent = state.comparisonPeriod === "ytd" && state.year !== "all" && comparisonEnd ? `${t.chartYtdNote} ${monthName(comparisonEnd.month)}` : t.chartSelectedNote;
   const services = Object.values(agg.services).sort((a,b)=>b.revenue-a.revenue);
   const top = services[0]; const lowMargin = [...services].sort((a,b)=>(a.revenue?a.contribution/a.revenue:0)-(b.revenue?b.contribution/b.revenue:0))[0];
   document.querySelector("#dynamic-insights").innerHTML = lang === "pt"
-    ? `<li>${growth === null ? "Use os filtros anuais para comparar o crescimento." : `A receita variou ${fmtPercent(Math.abs(growth))} ${growth >= 0 ? "acima" : "abaixo"} do período equivalente anterior.`}</li><li>${top ? `${top.service} liderou o período com ${fmtPercent(top.revenue/agg.revenue)} da receita.` : t.noData}</li><li>${lowMargin ? `${lowMargin.service} apresentou a menor margem bruta do recorte: ${fmtPercent(lowMargin.contribution/lowMargin.revenue)}.` : t.noData}</li><li>${agg.practicalOccupancy >= .85 ? "A capacidade faturável está pressionada; priorize preço, margem e gestão de agenda." : "Ainda há capacidade faturável para crescer com retenção e campanhas seletivas."}</li>`
-    : `<li>${growth === null ? "Use annual filters to compare growth." : `Revenue was ${fmtPercent(Math.abs(growth))} ${growth >= 0 ? "above" : "below"} the comparable prior period.`}</li><li>${top ? `${top.service} led the period with ${fmtPercent(top.revenue/agg.revenue)} of revenue.` : t.noData}</li><li>${lowMargin ? `${lowMargin.service} had the lowest gross margin in the selection: ${fmtPercent(lowMargin.contribution/lowMargin.revenue)}.` : t.noData}</li><li>${agg.practicalOccupancy >= .85 ? "Billable capacity is tight; prioritize pricing, margin, and schedule management." : "Billable capacity remains available for retention-led and selective campaign growth."}</li>`;
+    ? `<li>As vendas do período foram ${fmtMoney.format(agg.revenue)} e as saídas registradas foram ${fmtMoney.format(agg.expenses)}.</li><li>O superávit simplificado de caixa foi ${fmtMoney.format(cashSurplus)}. Ele não inclui pró-labore não pago.</li><li>${growth === null ? "Use os filtros anuais para comparar o crescimento das vendas." : `As vendas variaram ${fmtPercent(Math.abs(growth))} ${growth >= 0 ? "acima" : "abaixo"} do período equivalente anterior.`}</li><li>${top ? `${top.service} liderou o período com ${fmtPercent(top.revenue/agg.revenue)} das vendas.` : t.noData}</li>`
+    : `<li>Period sales were ${fmtMoney.format(agg.revenue)} and recorded cash outflows were ${fmtMoney.format(agg.expenses)}.</li><li>Simplified cash surplus was ${fmtMoney.format(cashSurplus)}. It excludes unpaid owner compensation.</li><li>${growth === null ? "Use annual filters to compare sales growth." : `Sales were ${fmtPercent(Math.abs(growth))} ${growth >= 0 ? "above" : "below"} the comparable prior period.`}</li><li>${top ? `${top.service} led the period with ${fmtPercent(top.revenue/agg.revenue)} of sales.` : t.noData}</li>`;
 
   document.querySelector("#profitability-kpis").innerHTML = [kpi(t.contributionKpi,fmtMoney.format(agg.contribution),fmtPercent(agg.margin)),kpi(t.ticketKpi,fmtMoney.format(agg.avgTicket),`${fmtNumber.format(agg.sales)} ${t.packages.toLowerCase()}`),kpi(t.packagesSold,fmtNumber.format(agg.sales),""),kpi(t.service,fmtNumber.format(services.length),"")].join("");
   document.querySelector("#service-table").innerHTML = services.map((s)=>{const margin=s.revenue?s.contribution/s.revenue:0;return `<tr><td><strong>${s.service}</strong></td><td>${fmtNumber.format(s.sales)}</td><td>${fmtPercent(agg.sales?s.sales/agg.sales:0)}</td><td>${fmtMoney.format(s.revenue)}</td><td>${fmtPercent(agg.revenue?s.revenue/agg.revenue:0)}</td><td>${fmtMoney.format(s.contribution)}</td><td>${fmtPercent(agg.contribution?s.contribution/agg.contribution:0)}</td><td><span class="margin-pill ${margin<.4?"low":""}">${fmtPercent(margin)}</span></td></tr>`}).join("");
@@ -339,8 +399,11 @@ function render() {
 
   document.querySelector("#cash-kpis").innerHTML = [kpi(t.expensesKpi,fmtMoney.format(agg.expenses),""),kpi(t.operatingKpi,fmtMoney.format(agg.cashFlow["Operacional"]||0),""),kpi(t.investingKpi,fmtMoney.format(agg.cashFlow["Investimento"]||0),""),kpi(t.financingKpi,fmtMoney.format(agg.cashFlow["Financiamento"]||0),"")].join("");
   document.querySelector("#expense-groups").innerHTML = barList(agg.expenseGroups);
-  document.querySelector("#cash-flow-chart").innerHTML = barList(agg.cashFlow);
   document.querySelector("#behavior-chart").innerHTML = barList(agg.behavior);
+  const expenseRows = [...agg.expenseTransactions].sort((a,b)=>b.date.localeCompare(a.date) || a.description.localeCompare(b.description));
+  const formatDate = (value) => new Intl.DateTimeFormat(lang === "pt" ? "pt-BR" : "en-US", { timeZone:"UTC" }).format(new Date(`${value}T00:00:00Z`));
+  document.querySelector("#expense-detail-table").innerHTML = expenseRows.length ? expenseRows.map((expense)=>`<tr><td>${formatDate(expense.date)}</td><td><strong>${expense.description}</strong></td><td>${businessLabel(expense.expense_type)}</td><td>${businessLabel(expense.account)}</td><td>${businessLabel(expense.accounting_group)}</td><td>${businessLabel(expense.cash_flow)}</td><td>${fmtMoney.format(expense.amount)}</td></tr>`).join("") : `<tr><td colspan="7">${t.noData}</td></tr>`;
+  document.querySelector("#expense-detail-total").innerHTML = `<tr><th colspan="6">${t.total}</th><th>${fmtMoney.format(sum(expenseRows.map((expense)=>expense.amount)))}</th></tr>`;
   renderStatements();
 
   const overdueAR = Object.entries(agg.arAging).filter(([k])=>!["Liquidado","A vencer"].includes(k)).reduce((a,[,v])=>a+v,0);
